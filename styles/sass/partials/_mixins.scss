@@ -2,3 +2,13 @@
 @mixin mixinName($parameter: "defaultParameterValue") {
 
 }
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flexCol {
+    display: flex;
+    flex-direction: column;
+}
