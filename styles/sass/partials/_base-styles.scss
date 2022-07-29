@@ -1,6 +1,15 @@
+* {
+    transition-property: transform;
+    transition-duration: 0.4s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 section {
-    padding-top: $padding;
-    padding-bottom: $padding;
+    padding-top: $spacing;
+    padding-bottom: $spacing;
 }
 
 .wrapper {
@@ -16,7 +25,11 @@ img {
 .button {
     background-color: $colorSix;
     margin: 0;
-    padding: calc(0.125 * $padding) calc(0.5 * $padding);
+    padding: calc(0.125 * $spacing) calc(0.5 * $spacing);
     
     font-weight: bold;
+}
+
+.horizontalLine {
+    border: 1px solid $colorOne;
 }

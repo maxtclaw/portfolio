@@ -23,13 +23,19 @@
 <body>
 
     <nav>
-        <ol>
-            <li><a href="#sectionIntro">Introduction</a></li>
-            <li><a href="#sectionAbout">About</a></li>
-            <li><a href="#sectionSkills">Skills</a></li>
-            <li><a href="#sectionProjects">Projects</a></li>
-            <li><a href="#sectionContact">Contact</a></li>
+
+        <div class="hamburgerButton">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
+        <ol class="navDropdown">
+            <li><a class="bold" href="#sectionIntro">01 Introduction</a></li>
+            <li><a class="bold" href="#sectionAbout">02 About</a></li>
+            <li><a class="bold" href="#sectionSkills">03 Skills</a></li>
+            <li><a class="bold" href="#sectionProjects">04 Projects</a></li>
+            <li><a class="bold" href="#sectionContact">05 Contact</a></li>
         </ol>
+
     </nav>
 
     <header>
@@ -40,6 +46,7 @@
                     <h1>Max Law</h1>
                     <p>Front-End Web Developer</p>
                 </div>
+                <a href="#sectionAbout"><i class="fa-solid fa-angles-down"></i></a>
             </div>
         </section>
     </header>
@@ -110,57 +117,49 @@
             <div class="wrapper">
                 <h2>Projects</h2>
                 <ul class="projectList">
-                    <li>
-                        <div class="projectContainer">
-                            <div class="textContainer">
-                                <h3>#Project Title <span class="projectSkills">#HTML CSS ETC</span></h3>
-                                
-                                <p>#Project description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, atque?</p>
-                            </div>
+                    <li class="projectListItem">
+                        <div class="projectOverlay">
+                            <p>#Project description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, atque?</p>
                             <div>
                                 <a href="#" class="button">View Live</a>
                                 <a href="#" class="button">GitHub</a>
                             </div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="projectContainer">
+
+
+                        <div class="imageContainer">
+                            <img src="../assets/phiXone.svg" alt="">
+                        </div>
+                        <div class="projectTextContainer">
                             <div class="textContainer">
-                                <h3>#Project Title <span class="projectSkills">#HTML CSS ETC</span></h3>
+                                <h3>#Project Title</h3>
+                                <span class="projectSkills">#HTML CSS ETC</span>
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <li class="projectListItem">
+                        <div class="projectOverlay">
+                            <p>#Project description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, atque?</p>
+                            <div>
+                                <a href="#" class="button">View Live</a>
+                                <a href="#" class="button">GitHub</a>
+                            </div>
+                        </div>
                     
-                                <p>#Project description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, atque?</p>
-                            </div>
-                            <div>
-                                <a href="#" class="button">View Live</a>
-                                <a href="#" class="button">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="projectContainer">
-                            <div class="textContainer">
-                                <h3>#Project Title <span class="projectSkills">#HTML CSS ETC</span></h3>
-                                
-                                <p>#Project description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, atque?</p>
-                            </div>
-                            <div>
-                                <a href="#" class="button">View Live</a>
-                                <a href="#" class="button">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="projectContainer">
-                            <div class="textContainer">
-                                <h3>#Project Title <span class="projectSkills">#HTML CSS ETC</span></h3>
                     
-                                <p>#Project description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, atque?</p>
-                            </div>
-                            <div>
-                                <a href="#" class="button">View Live</a>
-                                <a href="#" class="button">GitHub</a>
+                        <div class="imageContainer">
+                            <img src="../assets/phiXone.svg" alt="">
+                        </div>
+                        <div class="projectTextContainer">
+                            <div class="textContainer">
+                                <h3>#Project Title</h3>
+                                <span class="projectSkills">#HTML CSS ETC</span>
                             </div>
                         </div>
+                    
+                    
                     </li>
                 </ul>
             </div>

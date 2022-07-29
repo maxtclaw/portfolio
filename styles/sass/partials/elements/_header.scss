@@ -2,4 +2,15 @@
     background-color: $colorTwo;
     text-align: center;
     color: $colorFour;
+
+    height: 100vh;
+    max-height: 1000px;
+
+    @include flexCol;
+    justify-content: center;
+
+    .textContainer {
+        @include flexCol;
+        justify-content: center;
+    }
 }

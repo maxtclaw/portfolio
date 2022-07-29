@@ -20,7 +20,7 @@
 
     .skillContainer {
         text-align: center;
-        padding: $padding;
+        padding: $spacing;
     }
 
     i {
@@ -33,33 +33,59 @@
 
     .projectList {
         @include flexCol;
-        gap: $padding;
+        gap: $spacing;
     }
 
-    .projectContainer {
+    .projectListItem {
         background-color: $colorFour;
         display: block;
-
+        position: relative;
+    
         border: 1px solid $colorOne;
-        padding: $padding
     }
 
-    .textContainer {
+    .imageContainer {
+        display: block;
+        width: 100%;
 
-        padding-bottom: calc(0.5 * $padding);
-
-        h3, p {
-            margin: 0;
-        }
-        .projectSkills {
-            font-size: 0.7 * $fontSizeBase;
-            text-transform: uppercase;
-            font-weight: bold;
-            color: $colorTwo;
-
-            padding-left: $padding;
+        img {
+            min-width: 300px;
         }
     }
+
+    .projectTextContainer {
+        padding: $spacing;
+        padding-top: 0;
+
+        .textContainer {
+            padding-bottom: calc(0.5 * $spacing);
+    
+            h3,
+            p {
+                margin: 0;
+            }
+    
+            .projectSkills {
+                font-family: $fontFamilySubHeading;
+                font-size: 0.7 * $fontSizeBase;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: $colorTwo;
+            }
+        }
+    }
+
+    .projectOverlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        // background-color: rgba(0, 0, 0, 0.7);
+    }
+
 }
 
 .sectionContact {

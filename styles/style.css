@@ -235,6 +235,19 @@ html {
   overflow: hidden;
 }
 
+* {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 section {
   padding-top: calc(8px + 1.5625vw);
   padding-bottom: calc(8px + 1.5625vw);
@@ -255,6 +268,10 @@ img {
   margin: 0;
   padding: calc(0.125 * (8px + 1.5625vw)) calc(0.5 * (8px + 1.5625vw));
   font-weight: bold;
+}
+
+.horizontalLine {
+  border: 1px solid #14080E;
 }
 
 html {
@@ -329,14 +346,85 @@ ol, ul {
 
 nav {
   position: fixed;
-  top: 50%;
-  left: calc(8px + 1.5625vw);
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+nav .hamburgerButton {
+  position: fixed;
+  top: calc(1.25 * (8px + 1.5625vw));
+  right: calc(1.25 * (8px + 1.5625vw));
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.75rem;
+  pointer-events: auto;
+}
+nav ol {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  background-color: #F8F4F3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+nav ol a {
+  font-size: 2rem;
 }
 
 .sectionIntro {
   background-color: #365C46;
   text-align: center;
   color: #F8F4F3;
+  height: 100vh;
+  max-height: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.sectionIntro .textContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .sectionSkills {
@@ -388,24 +476,44 @@ nav {
           flex-direction: column;
   gap: calc(8px + 1.5625vw);
 }
-.sectionProjects .projectContainer {
+.sectionProjects .projectListItem {
   background-color: #F8F4F3;
   display: block;
+  position: relative;
   border: 1px solid #14080E;
-  padding: calc(8px + 1.5625vw);
 }
-.sectionProjects .textContainer {
+.sectionProjects .imageContainer {
+  display: block;
+  width: 100%;
+}
+.sectionProjects .imageContainer img {
+  min-width: 300px;
+}
+.sectionProjects .projectTextContainer {
+  padding: calc(8px + 1.5625vw);
+  padding-top: 0;
+}
+.sectionProjects .projectTextContainer .textContainer {
   padding-bottom: calc(0.5 * (8px + 1.5625vw));
 }
-.sectionProjects .textContainer h3, .sectionProjects .textContainer p {
+.sectionProjects .projectTextContainer .textContainer h3,
+.sectionProjects .projectTextContainer .textContainer p {
   margin: 0;
 }
-.sectionProjects .textContainer .projectSkills {
+.sectionProjects .projectTextContainer .textContainer .projectSkills {
+  font-family: "Montserrat", sans-serif;
   font-size: 0.7rem;
   text-transform: uppercase;
   font-weight: bold;
   color: #365C46;
-  padding-left: calc(8px + 1.5625vw);
+}
+.sectionProjects .projectOverlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .sectionContact {
@@ -419,4 +527,13 @@ footer {
 }
 footer p {
   margin: 0;
+}
+
+nav .navDropdown {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+nav .navDropdownActive {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }

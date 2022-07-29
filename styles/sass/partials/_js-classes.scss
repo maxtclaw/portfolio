@@ -1,0 +1,12 @@
+
+// Manage dropdown visibility of navigational menu
+// hamburgerDropdown.js
+nav {
+    .navDropdown {
+        transform: translateY(-100%);
+    }
+
+    .navDropdownActive {
+        transform: translateY(0%);
+    }
+}

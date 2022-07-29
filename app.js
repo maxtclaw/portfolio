@@ -9,3 +9,6 @@ moduleDefaultFunction();
 moduleFunction();
 
 
+import hamburgerDropdown from './scripts/hamburgerDropdown.js';
+
+hamburgerDropdown();
