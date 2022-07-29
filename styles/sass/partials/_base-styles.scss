@@ -1,10 +1,22 @@
+section {
+    padding-top: $padding;
+    padding-bottom: $padding;
+}
+
+.wrapper {
+    width: clamp(16rem, 90vw, 70rem);
+    margin: 0 auto;
+}
+
 img {
     max-width: 100%;
     display: block;
 }
 
-.wrapper {
-    width: 80%;
-    max-width: 1920px;
-    margin: 0 auto;
+.button {
+    background-color: $colorSix;
+    margin: 0;
+    padding: calc(0.125 * $padding) calc(0.5 * $padding);
+    
+    font-weight: bold;
 }

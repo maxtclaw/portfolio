@@ -235,19 +235,34 @@ html {
   overflow: hidden;
 }
 
+section {
+  padding-top: calc(8px + 1.5625vw);
+  padding-bottom: calc(8px + 1.5625vw);
+}
+
+.wrapper {
+  width: clamp(16rem, 90vw, 70rem);
+  margin: 0 auto;
+}
+
 img {
   max-width: 100%;
   display: block;
 }
 
-.wrapper {
-  width: 80%;
-  max-width: 1920px;
-  margin: 0 auto;
+.button {
+  background-color: #DB9999;
+  margin: 0;
+  padding: calc(0.125 * (8px + 1.5625vw)) calc(0.5 * (8px + 1.5625vw));
+  font-weight: bold;
 }
 
 html {
   font-size: 125%;
+}
+
+h1, h2, h3, h4, a, p {
+  line-height: 1.6;
 }
 
 h1, h2 {
@@ -291,6 +306,7 @@ a {
 }
 
 ol, ul {
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -305,4 +321,102 @@ ol, ul {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.center {
+  text-align: center;
+}
+
+nav {
+  position: fixed;
+  top: 50%;
+  left: calc(8px + 1.5625vw);
+}
+
+.sectionIntro {
+  background-color: #365C46;
+  text-align: center;
+  color: #F8F4F3;
+}
+
+.sectionSkills {
+  background-color: #365C46;
+  color: #F8F4F3;
+  text-align: center;
+}
+.sectionSkills .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.sectionSkills .skillsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.sectionSkills .skillContainer {
+  text-align: center;
+  padding: calc(8px + 1.5625vw);
+}
+.sectionSkills i {
+  font-size: 3rem;
+}
+
+.sectionProjects {
+  background-color: #F7E4DC;
+}
+.sectionProjects .projectList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: calc(8px + 1.5625vw);
+}
+.sectionProjects .projectContainer {
+  background-color: #F8F4F3;
+  display: block;
+  border: 1px solid #14080E;
+  padding: calc(8px + 1.5625vw);
+}
+.sectionProjects .textContainer {
+  padding-bottom: calc(0.5 * (8px + 1.5625vw));
+}
+.sectionProjects .textContainer h3, .sectionProjects .textContainer p {
+  margin: 0;
+}
+.sectionProjects .textContainer .projectSkills {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #365C46;
+  padding-left: calc(8px + 1.5625vw);
+}
+
+.sectionContact {
+  background-color: #B6CAA2;
+}
+
+footer {
+  background-color: #14080E;
+  color: #F8F4F3;
+  text-align: center;
+}
+footer p {
+  margin: 0;
 }

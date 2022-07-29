@@ -4,6 +4,10 @@ html {
 }
 
 // Basic Typographical Styling
+h1, h2, h3, h4, a, p {
+    line-height: 1.6;
+}
+
 h1, h2 {
     font-family: $fontFamilyHeading;
 }
@@ -47,6 +51,7 @@ a {
 
 // Remove numbering and bullets
 ol, ul {
+    margin: 0;
     padding: 0;
     list-style: none;
 }
@@ -62,4 +67,8 @@ ol, ul {
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.center {
+    text-align: center;
 }

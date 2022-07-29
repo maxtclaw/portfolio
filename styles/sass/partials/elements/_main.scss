@@ -1,0 +1,67 @@
+.sectionAbout {
+    
+}
+
+.sectionSkills {
+    background-color: $colorTwo;
+    color: $colorFour;
+
+    text-align: center;
+
+    .wrapper {
+        @include flexCol;
+    }
+
+    .skillsList {
+        @include flexRow;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .skillContainer {
+        text-align: center;
+        padding: $padding;
+    }
+
+    i {
+        font-size: 3 * $fontSizeBase;
+    }
+}
+
+.sectionProjects {
+    background-color: $colorFive;
+
+    .projectList {
+        @include flexCol;
+        gap: $padding;
+    }
+
+    .projectContainer {
+        background-color: $colorFour;
+        display: block;
+
+        border: 1px solid $colorOne;
+        padding: $padding
+    }
+
+    .textContainer {
+
+        padding-bottom: calc(0.5 * $padding);
+
+        h3, p {
+            margin: 0;
+        }
+        .projectSkills {
+            font-size: 0.7 * $fontSizeBase;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $colorTwo;
+
+            padding-left: $padding;
+        }
+    }
+}
+
+.sectionContact {
+    background-color: $colorThree;
+}

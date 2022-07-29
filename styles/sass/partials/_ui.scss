@@ -1,0 +1,17 @@
+.scrollParent {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        flex-shrink: 0;
+        height: 50%;
+        border: 1px solid red;
+    }
+}        
+
+.scrollChild {
+    scroll-snap-align: center;
+}

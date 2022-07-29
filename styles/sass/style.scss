@@ -4,4 +4,12 @@
 @import "./partials/_mixins";
 
 @import "./partials/base-styles";
-@import "./partials/typography"
+@import "./partials/typography";
+
+@import "./partials/elements/nav";
+@import "./partials/elements/header";
+@import "./partials/elements/main";
+@import "./partials/elements/footer";
+
+// Currently Unused
+// @import "./partials/ui"
