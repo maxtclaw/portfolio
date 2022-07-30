@@ -1,33 +1,50 @@
 nav {
     position: fixed;
-    left: 50%;
-    transform: translate(-50%, 0);
-    z-index: 10;
 
     width: 100%;
     height: 100%;
-
+    z-index: 10;
+    
     // Makes <nav> transparent to clicks
     // otherwise, the full-size nav will make everything unable to be interacted with, even when the <ol> is hidden, from: https: //stackoverflow.com/questions/3680429/click-through-div-to-underlying-elements
     pointer-events: none;
 
-    .hamburgerButton {
+    .navBar {
         position: fixed;
-        top: calc(1.25 * $spacing);
-        right: calc(1.25 * $spacing);
-        z-index: 20;
+        top: 0;
+        left: 0;
 
-        display: flex;
-        justify-content: center;
+        z-index: 10;
+
+        @include flexRow;
+        justify-content: space-between;
         align-items: center;
 
-        width: calc(2 * $fontSizeBase);
-        height: calc(2 * $fontSizeBase);
+        width: 100%;
+        height: 64px;
+        padding: calc(0.5*$spacing);
+        background-color: $colorWhite;
+        border-bottom: 2px solid $colorOne;
 
-        font-size: 1.75 * $fontSizeBase;
+        
+        h4 {
+            pointer-events: auto;
+            color: transparent;
+            text-shadow: 0 0 0 $colorBlack;
+        }
 
-        // Keeps button interactable to clicks
-        pointer-events: auto;
+        .hamburgerButton {
+            width: calc(2 * $fontSizeBase);
+            height: calc(2 * $fontSizeBase);
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.75 * $fontSizeBase;
+    
+            // Keeps button interactable to clicks
+            pointer-events: auto;
+        }
     }
 
     ol {

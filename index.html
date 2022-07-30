@@ -10,7 +10,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Montserrat:wght@400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome Icons -->
@@ -24,16 +24,19 @@
 
     <nav>
 
-        <div class="hamburgerButton">
-            <i class="fa-solid fa-bars"></i>
+        <div class="navBar">
+            <a href="#sectionIntro">
+                <h4>🌱 Max Law</h4>
+            </a>
+            <i class="fa-solid fa-bars hamburgerButton"></i>
         </div>
         
         <ol class="navDropdown">
-            <li><a class="bold" href="#sectionIntro">01 Introduction</a></li>
-            <li><a class="bold" href="#sectionAbout">02 About</a></li>
-            <li><a class="bold" href="#sectionSkills">03 Skills</a></li>
-            <li><a class="bold" href="#sectionProjects">04 Projects</a></li>
-            <li><a class="bold" href="#sectionContact">05 Contact</a></li>
+            <li><a class="bold" href="#sectionIntro">Introduction</a></li>
+            <li><a class="bold" href="#sectionAbout">About</a></li>
+            <li><a class="bold" href="#sectionSkills">Skills</a></li>
+            <li><a class="bold" href="#sectionProjects">Projects</a></li>
+            <li><a class="bold" href="#sectionContact">Contact</a></li>
         </ol>
 
     </nav>
@@ -42,9 +45,9 @@
         <section class="sectionIntro" id="sectionIntro">
             <div class="wrapper">
                 <div class="textContainer">
-                    <h2>Introduction</h2>
+                    <!-- <h2>Introduction</h2> -->
                     <h1>Max Law</h1>
-                    <p>Front-End Web Developer</p>
+                    <p>A Toronto-based Front-End Web Developer</p>
                 </div>
                 <a href="#sectionAbout"><i class="fa-solid fa-angles-down"></i></a>
             </div>
@@ -55,7 +58,7 @@
         <section class="sectionAbout" id="sectionAbout">
             <div class="wrapper">
                 <div class="textContainer">
-                    <h2>About</h2>
+                    <h2><i class="fa-solid fa-angle-right"></i> About Me</h2>
                     <h3>Max Law</h3>
                     <p># Lorem ipsum dolor sit amet consectetur adipisicing elit. Est similique repellendus repellat velit repudiandae ea nisi, in mollitia hic fugiat.</p>
                     <p># Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, dignissimos debitis cupiditate, animi autem quidem ad sapiente distinctio soluta temporibus dolore nihil, error ducimus! Quisquam ducimus cumque eius! Quisquam, animi!</p>
@@ -115,51 +118,24 @@
 
         <section class="sectionProjects" id="sectionProjects">
             <div class="wrapper">
-                <h2>Projects</h2>
+                <h2><i class="fa-solid fa-angle-right"></i> Projects</h2>
+                <p>Learn more about my past projects and the tech stack behind them. See how they work with a live link, and take a look at the code behind it.</p>
                 <ul class="projectList">
                     <li class="projectListItem">
-                        <div class="projectOverlay">
-                            <p>#Project description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, atque?</p>
-                            <div>
+                        <div class="imageContainer">
+                            <img src="../assets/phiXone.svg" alt="#">
+                        </div>
+                        <div class="projectTextContainer">
+                            <div class="textContianer">
+                                <h3>#Project Title</h3>
+                                <p class="projectSkills bold">#HTML CSS </p>
+                                <p>#Project description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, atque?</p>
+                            </div>
+                            <div class="projectLinks">
                                 <a href="#" class="button">View Live</a>
                                 <a href="#" class="button">GitHub</a>
                             </div>
                         </div>
-
-
-                        <div class="imageContainer">
-                            <img src="../assets/phiXone.svg" alt="">
-                        </div>
-                        <div class="projectTextContainer">
-                            <div class="textContainer">
-                                <h3>#Project Title</h3>
-                                <span class="projectSkills">#HTML CSS ETC</span>
-                            </div>
-                        </div>
-
-
-                    </li>
-                    <li class="projectListItem">
-                        <div class="projectOverlay">
-                            <p>#Project description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, atque?</p>
-                            <div>
-                                <a href="#" class="button">View Live</a>
-                                <a href="#" class="button">GitHub</a>
-                            </div>
-                        </div>
-                    
-                    
-                        <div class="imageContainer">
-                            <img src="../assets/phiXone.svg" alt="">
-                        </div>
-                        <div class="projectTextContainer">
-                            <div class="textContainer">
-                                <h3>#Project Title</h3>
-                                <span class="projectSkills">#HTML CSS ETC</span>
-                            </div>
-                        </div>
-                    
-                    
                     </li>
                 </ul>
             </div>
@@ -167,7 +143,8 @@
 
         <section class="sectionContact" id="sectionContact">
             <div class="wrapper">
-                <h2>Contact</h2>
+                <h2><i class="fa-solid fa-angle-right"></i> Contact</h2>
+                <p>Let's get in touch! You can find me via email, or send me a message here.</p>
                 <ul class="contactList">
                     <li>
                         <div class="contactContainer">

@@ -1,8 +1,14 @@
 .sectionIntro {
     background-color: $colorTwo;
+    background-image: url("../../assets/dots.svg");
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-position: bottom;
+    transform: translateY(-2.5%);
     text-align: center;
-    color: $colorFour;
+    color: $colorSix;
 
+    margin-top: 50px;
     height: 100vh;
     max-height: 1000px;
 
@@ -12,5 +18,9 @@
     .textContainer {
         @include flexCol;
         justify-content: center;
+
+        h1 {
+            margin-bottom: 0;
+        }
     }
 }

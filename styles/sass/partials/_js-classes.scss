@@ -10,3 +10,13 @@ nav {
         transform: translateY(0%);
     }
 }
+
+.sectionProjects {
+    .projectOverlay {
+        display: none;
+    }
+
+    .projectOverlayActive {
+        display: flex;
+    }
+}

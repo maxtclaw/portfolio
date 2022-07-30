@@ -236,16 +236,17 @@ html {
 }
 
 * {
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding: 50px;
 }
 
 section {
@@ -264,14 +265,18 @@ img {
 }
 
 .button {
-  background-color: #DB9999;
+  background-color: #ffc3bb;
   margin: 0;
   padding: calc(0.125 * (8px + 1.5625vw)) calc(0.5 * (8px + 1.5625vw));
   font-weight: bold;
 }
+.button:hover {
+  color: #ffc3bb;
+  background-color: #000;
+}
 
 .horizontalLine {
-  border: 1px solid #14080E;
+  border: 1px solid #6c8075;
 }
 
 html {
@@ -283,38 +288,38 @@ h1, h2, h3, h4, a, p {
 }
 
 h1, h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 h3, h4 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 h1 {
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2.3rem;
 }
 
 h2 {
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 h3 {
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 h4 {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 a,
 p {
-  font-family: "Catamaran", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 a {
@@ -346,19 +351,43 @@ ol, ul {
 
 nav {
   position: fixed;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  z-index: 10;
   width: 100%;
   height: 100%;
+  z-index: 10;
   pointer-events: none;
 }
-nav .hamburgerButton {
+nav .navBar {
   position: fixed;
-  top: calc(1.25 * (8px + 1.5625vw));
-  right: calc(1.25 * (8px + 1.5625vw));
-  z-index: 20;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 64px;
+  padding: calc(0.5 * (8px + 1.5625vw));
+  background-color: #FFF;
+  border-bottom: 2px solid #6c8075;
+}
+nav .navBar h4 {
+  pointer-events: auto;
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+nav .navBar .hamburgerButton {
+  width: 2rem;
+  height: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,8 +397,6 @@ nav .hamburgerButton {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 2rem;
-  height: 2rem;
   font-size: 1.75rem;
   pointer-events: auto;
 }
@@ -378,7 +405,7 @@ nav ol {
   width: 100%;
   height: 100%;
   pointer-events: auto;
-  background-color: #F8F4F3;
+  background-color: #CCE3DE;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -398,9 +425,16 @@ nav ol a {
 }
 
 .sectionIntro {
-  background-color: #365C46;
+  background-color: #6B9080;
+  background-image: url("../../assets/dots.svg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: bottom;
+  -webkit-transform: translateY(-2.5%);
+          transform: translateY(-2.5%);
   text-align: center;
-  color: #F8F4F3;
+  color: #F6FFF8;
+  margin-top: 50px;
   height: 100vh;
   max-height: 1000px;
   display: -webkit-box;
@@ -426,10 +460,17 @@ nav ol a {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.sectionIntro .textContainer h1 {
+  margin-bottom: 0;
+}
+
+.sectionAbout {
+  background-color: #FFF;
+}
 
 .sectionSkills {
-  background-color: #365C46;
-  color: #F8F4F3;
+  background-color: #6B9080;
+  color: #F6FFF8;
   text-align: center;
 }
 .sectionSkills .wrapper {
@@ -464,7 +505,7 @@ nav ol a {
 }
 
 .sectionProjects {
-  background-color: #F7E4DC;
+  background-color: #F6FFF8;
 }
 .sectionProjects .projectList {
   display: -webkit-box;
@@ -477,52 +518,73 @@ nav ol a {
   gap: calc(8px + 1.5625vw);
 }
 .sectionProjects .projectListItem {
-  background-color: #F8F4F3;
-  display: block;
   position: relative;
-  border: 1px solid #14080E;
+  background-color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border: 1px solid #6c8075;
 }
-.sectionProjects .imageContainer {
+.sectionProjects .projectListItem .imageContainer {
   display: block;
   width: 100%;
 }
-.sectionProjects .imageContainer img {
+.sectionProjects .projectListItem .imageContainer img {
   min-width: 300px;
 }
-.sectionProjects .projectTextContainer {
+.sectionProjects .projectListItem .projectTextContainer {
   padding: calc(8px + 1.5625vw);
-  padding-top: 0;
 }
-.sectionProjects .projectTextContainer .textContainer {
-  padding-bottom: calc(0.5 * (8px + 1.5625vw));
+.sectionProjects .projectListItem .projectTextContainer h3 {
+  margin-top: calc(0.25 * (8px + 1.5625vw));
+  margin-bottom: 0;
 }
-.sectionProjects .projectTextContainer .textContainer h3,
-.sectionProjects .projectTextContainer .textContainer p {
+.sectionProjects .projectListItem .projectTextContainer .projectSkills {
+  color: #6B9080;
+}
+.sectionProjects .projectListItem .projectTextContainer p:not(:last-child) {
   margin: 0;
 }
-.sectionProjects .projectTextContainer .textContainer .projectSkills {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #365C46;
-}
 .sectionProjects .projectOverlay {
-  display: none;
   position: absolute;
   top: 0;
   left: 0;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: calc(8px + 1.5625vw);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100%;
+  padding: calc(8px + 1.5625vw);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.sectionProjects .projectOverlay h3, .sectionProjects .projectOverlay p {
+  margin-bottom: 0;
+  color: #F6FFF8;
 }
 
 .sectionContact {
-  background-color: #B6CAA2;
+  background-color: #A4C3B2;
 }
 
 footer {
-  background-color: #14080E;
-  color: #F8F4F3;
+  background-color: #000;
+  color: #F6FFF8;
   text-align: center;
 }
 footer p {
@@ -536,4 +598,13 @@ nav .navDropdown {
 nav .navDropdownActive {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
+}
+
+.sectionProjects .projectOverlay {
+  display: none;
+}
+.sectionProjects .projectOverlayActive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }

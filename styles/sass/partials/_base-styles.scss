@@ -1,10 +1,11 @@
 * {
-    transition-property: transform;
+    transition-property: transform, opacity;
     transition-duration: 0.4s;
 }
 
 html {
     scroll-behavior: smooth;
+    scroll-padding: 50px;
 }
 
 section {
@@ -23,11 +24,16 @@ img {
 }
 
 .button {
-    background-color: $colorSix;
+    background-color: $testSix;
     margin: 0;
     padding: calc(0.125 * $spacing) calc(0.5 * $spacing);
     
     font-weight: bold;
+
+    &:hover {
+        color: $testSix;
+        background-color: $colorBlack;
+    }
 }
 
 .horizontalLine {

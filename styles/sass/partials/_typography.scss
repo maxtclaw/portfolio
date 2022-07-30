@@ -18,29 +18,29 @@ h3, h4 {
 
 h1 {
     font-weight: 700;
-    font-size: 1.8 * $fontSizeBase;
+    font-size: 2.3 * $fontSizeBase;
 }
 
 h2 {
     font-weight: 600;
-    font-size: 1.6 * $fontSizeBase;
+    font-size: 1.8 * $fontSizeBase;
 }
 
 h3 {
     font-weight: 500;
-    font-size: 1.4 * $fontSizeBase;
+    font-size: 1.2 * $fontSizeBase;
 }
 
 h4 {
     font-weight: 400;
-    font-size: 1.2 * $fontSizeBase;
+    font-size: 1 * $fontSizeBase;
 }
 
 a,
 p {
     font-family: $fontFamilyBody;
     font-weight: 400;
-    font-size: 0.9 * $fontSizeBase;
+    font-size: 0.8 * $fontSizeBase;
 }
 
 // Remove hyperlink underline

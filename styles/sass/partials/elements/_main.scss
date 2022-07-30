@@ -1,10 +1,10 @@
 .sectionAbout {
-    
+    background-color: $colorWhite;
 }
 
 .sectionSkills {
     background-color: $colorTwo;
-    color: $colorFour;
+    color: $colorSix;
 
     text-align: center;
 
@@ -29,7 +29,7 @@
 }
 
 .sectionProjects {
-    background-color: $colorFive;
+    background-color: $colorSix;
 
     .projectList {
         @include flexCol;
@@ -37,53 +37,64 @@
     }
 
     .projectListItem {
-        background-color: $colorFour;
-        display: block;
         position: relative;
-    
+        
+        background-color: $colorWhite;
+        
+        @include flexCol;
+        align-items: flex-start;
         border: 1px solid $colorOne;
-    }
 
-    .imageContainer {
-        display: block;
-        width: 100%;
+        .imageContainer {
+            display: block;
+            width: 100%;
 
-        img {
-            min-width: 300px;
+            img {
+                min-width: 300px;
+            }
         }
-    }
 
-    .projectTextContainer {
-        padding: $spacing;
-        padding-top: 0;
-
-        .textContainer {
-            padding-bottom: calc(0.5 * $spacing);
-    
-            h3,
-            p {
+        .projectTextContainer {
+            padding: $spacing;
+            h3 {
+                margin-top: calc(0.25 * $spacing);
+                margin-bottom: 0;
+            }
+            .projectSkills {
+                color: $colorTwo
+            }
+            p:not(:last-child){
                 margin: 0;
             }
-    
-            .projectSkills {
-                font-family: $fontFamilySubHeading;
-                font-size: 0.7 * $fontSizeBase;
-                text-transform: uppercase;
-                font-weight: bold;
-                color: $colorTwo;
-            }
         }
+
     }
 
+
+
     .projectOverlay {
-        display: none;
         position: absolute;
         top: 0;
         left: 0;
-
+    
+        display: none;
+        // display: flex;
+        flex-direction: column;
+        gap: $spacing;
+        justify-content: center;
+        align-items: center;
+    
         width: 100%;
         height: 100%;
-        // background-color: rgba(0, 0, 0, 0.7);
+    
+        padding: $spacing;
+    
+        background-color: rgba($color: #000000, $alpha: 0.6);
+
+        h3, p {
+            margin-bottom: 0;
+            color: $colorSix;
+        }
     }
 
 }
