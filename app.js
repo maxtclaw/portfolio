@@ -1,17 +1,7 @@
-// Importing default function from module
-import moduleDefaultFunction from './scripts/script.js'
+// Manage navbar dropdown menu
+import hamburgerDropdownButtonListener from './scripts/hamburgerDropdown.js';
+import { hamburgerDropdownElementListener, navNameAnchorElementListener } from './scripts/hamburgerDropdown.js'
 
-// Importing named function from module
-import { moduleFunction } from './scripts/script.js'
-
-// Calling imported functions
-moduleDefaultFunction();
-moduleFunction();
-
-
-// Manage hamburger dropdown menu
-import hamburgerDropdown from './scripts/hamburgerDropdown.js';
-import { hamburgerDropdownMinimize } from './scripts/hamburgerDropdown.js'
-
-hamburgerDropdown();
-hamburgerDropdownMinimize();
+hamburgerDropdownButtonListener();
+hamburgerDropdownElementListener();
+navNameAnchorElementListener()
