@@ -33,6 +33,11 @@ nav {
             text-shadow: 0 0 0 $colorBlack;
         }
 
+        button {
+            background-color: transparent;
+            border: none;
+        }
+
         .hamburgerButton {
             width: calc(2 * $fontSizeBase);
             height: calc(2 * $fontSizeBase);

@@ -9,10 +9,9 @@ moduleDefaultFunction();
 moduleFunction();
 
 
+// Manage hamburger dropdown menu
 import hamburgerDropdown from './scripts/hamburgerDropdown.js';
 import { hamburgerDropdownMinimize } from './scripts/hamburgerDropdown.js'
-import projectOverlay from './scripts/projectOverlay.js';
 
 hamburgerDropdown();
-projectOverlay();
 hamburgerDropdownMinimize();

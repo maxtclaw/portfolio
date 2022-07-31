@@ -14,11 +14,19 @@ $fontSizeBase: 1rem;
 // $colorFour: #F8F4F3;
 // $colorFive: #F7E4DC;
 // $colorSix: #DB9999;
-$colorOne:#6c8075;
-$colorTwo: #6B9080;
-$colorThree: #A4C3B2;
-$colorFour: #CCE3DE;
-$colorFive: #EAF4F4;
+
+// $colorOne:#6c8075;
+// $colorTwo: #6B9080;
+// $colorThree: #A4C3B2;
+// $colorFour: #CCE3DE;
+// $colorFive: #EAF4F4;
+// $colorSix: #F6FFF8;
+
+$colorOne:#2F3E46;
+$colorTwo: #354F52;
+$colorThree: #52796F;
+$colorFour: #84A98C;
+$colorFive: #CAD2C5;
 $colorSix: #F6FFF8;
 
 $colorBlack: #000;
@@ -34,3 +42,8 @@ $testSix: #ffc3bb;
 
 // Spacing, from https: //matthewjamestaylor.com/responsive-padding
 $spacing: calc(8px + 1.5625vw);
+
+// Breakpoints
+$largeBreakpoint: 1000px;
+$mediumBreakpoint: 768px;
+$smallBreakpoint: 500px;

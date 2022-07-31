@@ -268,19 +268,25 @@ img {
   background-color: #ffc3bb;
   margin: 0;
   padding: calc(0.125 * (8px + 1.5625vw)) calc(0.5 * (8px + 1.5625vw));
+  border: 1px solid #000;
   font-weight: bold;
 }
 .button:hover {
   color: #ffc3bb;
   background-color: #000;
+  border: 1px solid #ffc3bb;
 }
 
 .horizontalLine {
-  border: 1px solid #6c8075;
+  border: 1px solid #2F3E46;
 }
 
 html {
   font-size: 125%;
+}
+
+h1, h2, h3, h4 {
+  margin: calc(8px + 1.5625vw) 0;
 }
 
 h1, h2, h3, h4, a, p {
@@ -378,12 +384,16 @@ nav .navBar {
   height: 64px;
   padding: calc(0.5 * (8px + 1.5625vw));
   background-color: #FFF;
-  border-bottom: 2px solid #6c8075;
+  border-bottom: 2px solid #2F3E46;
 }
 nav .navBar h4 {
   pointer-events: auto;
   color: transparent;
   text-shadow: 0 0 0 #000;
+}
+nav .navBar button {
+  background-color: transparent;
+  border: none;
 }
 nav .navBar .hamburgerButton {
   width: 2rem;
@@ -405,7 +415,7 @@ nav ol {
   width: 100%;
   height: 100%;
   pointer-events: auto;
-  background-color: #CCE3DE;
+  background-color: #84A98C;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -424,8 +434,8 @@ nav ol a {
   font-size: 2rem;
 }
 
-.sectionIntro {
-  background-color: #6B9080;
+.sectionHeader {
+  background-color: #354F52;
   background-image: url("../../assets/dots.svg");
   background-repeat: repeat-y;
   background-size: cover;
@@ -448,7 +458,7 @@ nav ol a {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.sectionIntro .textContainer {
+.sectionHeader .textContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -460,7 +470,7 @@ nav ol a {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.sectionIntro .textContainer h1 {
+.sectionHeader .textContainer h1 {
   margin-bottom: 0;
 }
 
@@ -469,7 +479,7 @@ nav ol a {
 }
 
 .sectionSkills {
-  background-color: #6B9080;
+  background-color: #354F52;
   color: #F6FFF8;
   text-align: center;
 }
@@ -482,7 +492,7 @@ nav ol a {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.sectionSkills .skillsList {
+.sectionSkills .skillList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -517,9 +527,20 @@ nav ol a {
           flex-direction: column;
   gap: calc(8px + 1.5625vw);
 }
+@media only screen and (min-width: 768px) {
+  .sectionProjects .projectList {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 .sectionProjects .projectListItem {
   position: relative;
   background-color: #FFF;
+  border: 1px solid #2F3E46;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -527,19 +548,43 @@ nav ol a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  border: 1px solid #6c8075;
+}
+@media only screen and (min-width: 768px) {
+  .sectionProjects .projectListItem {
+    -ms-flex-preferred-size: calc(50% - (8px + 1.5625vw));
+        flex-basis: calc(50% - (8px + 1.5625vw));
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .sectionProjects .projectListItem {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .sectionProjects .projectListItem img {
+    max-height: 250px;
+  }
 }
 .sectionProjects .projectListItem .imageContainer {
   display: block;
-  width: 100%;
-}
-.sectionProjects .projectListItem .imageContainer img {
-  min-width: 300px;
 }
 .sectionProjects .projectListItem .projectTextContainer {
+  display: block;
   padding: calc(8px + 1.5625vw);
 }
 .sectionProjects .projectListItem .projectTextContainer h3 {
@@ -547,39 +592,16 @@ nav ol a {
   margin-bottom: 0;
 }
 .sectionProjects .projectListItem .projectTextContainer .projectSkills {
-  color: #6B9080;
+  color: #354F52;
 }
 .sectionProjects .projectListItem .projectTextContainer p:not(:last-child) {
   margin: 0;
 }
-.sectionProjects .projectOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: calc(8px + 1.5625vw);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: calc(8px + 1.5625vw);
-  background-color: rgba(0, 0, 0, 0.6);
-}
-.sectionProjects .projectOverlay h3, .sectionProjects .projectOverlay p {
-  margin-bottom: 0;
-  color: #F6FFF8;
-}
 
 .sectionContact {
-  background-color: #A4C3B2;
+  background-color: #52796F;
+  color: #F6FFF8;
+  text-align: center;
 }
 
 footer {

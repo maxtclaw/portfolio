@@ -27,12 +27,14 @@ img {
     background-color: $testSix;
     margin: 0;
     padding: calc(0.125 * $spacing) calc(0.5 * $spacing);
+    border: 1px solid $colorBlack;
     
     font-weight: bold;
 
     &:hover {
         color: $testSix;
         background-color: $colorBlack;
+        border: 1px solid $testSix;
     }
 }
 

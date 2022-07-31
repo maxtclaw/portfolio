@@ -25,14 +25,14 @@
     <nav>
 
         <div class="navBar">
-            <a href="#sectionIntro">
+            <a href="#sectionHeader">
                 <h4>🌱 Max Law</h4>
             </a>
-            <i class="fa-solid fa-bars hamburgerButton"></i>
+            <i class="fa-solid fa-bars hamburgerButton" aria-label="open menu"></i>
         </div>
         
         <ol class="navDropdown">
-            <li><a class="bold" href="#sectionIntro">Introduction</a></li>
+            <li><a class="bold" href="#sectionHeader">Introduction</a></li>
             <li><a class="bold" href="#sectionAbout">About</a></li>
             <li><a class="bold" href="#sectionSkills">Skills</a></li>
             <li><a class="bold" href="#sectionProjects">Projects</a></li>
@@ -42,14 +42,14 @@
     </nav>
 
     <header>
-        <section class="sectionIntro" id="sectionIntro">
+        <section class="sectionHeader" id="sectionHeader">
             <div class="wrapper">
                 <div class="textContainer">
                     <!-- <h2>Introduction</h2> -->
                     <h1>Max Law</h1>
                     <p>A Toronto-based Front-End Web Developer</p>
                 </div>
-                <a href="#sectionAbout"><i class="fa-solid fa-angles-down"></i></a>
+                <a href="#sectionAbout" aria-label="go to about section"><i class="fa-solid fa-angles-down"></i></a>
             </div>
         </section>
     </header>
@@ -58,7 +58,7 @@
         <section class="sectionAbout" id="sectionAbout">
             <div class="wrapper">
                 <div class="textContainer">
-                    <h2><i class="fa-solid fa-angle-right"></i> About Me</h2>
+                    <h2><i class="fa-solid fa-angle-right" aria-hidden="true"></i> About Me</h2>
                     <h3>Max Law</h3>
                     <p># Lorem ipsum dolor sit amet consectetur adipisicing elit. Est similique repellendus repellat velit repudiandae ea nisi, in mollitia hic fugiat.</p>
                     <p># Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, dignissimos debitis cupiditate, animi autem quidem ad sapiente distinctio soluta temporibus dolore nihil, error ducimus! Quisquam ducimus cumque eius! Quisquam, animi!</p>
@@ -69,48 +69,34 @@
         <section class="sectionSkills" id="sectionSkills">
             <div class="wrapper">
                 <h2>Skills</h2>
-                <ul class="skillsList">
-                    <li>
-                        <div class="skillContainer">
-                            <i class="devicon-html5-plain" aria-hidden="true"></i>
-                            <p>HTML</p>
-                        </div>
+                <ul class="skillList">
+                    <li class="skillContainer">
+                        <i class="devicon-html5-plain" aria-hidden="true"></i>
+                        <p>HTML</p>
                     </li>
-                    <li>
-                        <div class="skillContainer">
-                            <i class="devicon-css3-plain" aria-hidden="true"></i>
-                            <p>CSS</p>
-                        </div>
+                    <li class="skillContainer">
+                        <i class="devicon-css3-plain" aria-hidden="true"></i>
+                        <p>CSS</p>
                     </li>
-                    <li>
-                        <div class="skillContainer">
-                            <i class="devicon-sass-original" aria-hidden="true"></i>
-                            <p>SASS</p>
-                        </div>
+                    <li class="skillContainer">
+                        <i class="devicon-sass-original" aria-hidden="true"></i>
+                        <p>SASS</p>
                     </li>
-                    <li>
-                        <div class="skillContainer">
-                            <i class="devicon-javascript-plain" aria-hidden="true"></i>
-                            <p>JavaScript</p>
-                        </div>
+                    <li class="skillContainer">
+                        <i class="devicon-javascript-plain" aria-hidden="true"></i>
+                        <p>JavaScript</p>
                     </li>
-                    <li>
-                        <div class="skillContainer">
-                            <i class="devicon-github-original" aria-hidden="true"></i>
-                            <p>GitHub</p>
-                        </div>
+                    <li class="skillContainer">
+                        <i class="devicon-github-original" aria-hidden="true"></i>
+                        <p>GitHub</p>
                     </li>
-                    <li>
-                        <div class="skillContainer">
-                            <i class="devicon-react-original" aria-hidden="true"></i>
-                            <p>React</p>
-                        </div>
+                    <li class="skillContainer">
+                        <i class="devicon-react-original" aria-hidden="true"></i>
+                        <p>React</p>
                     </li>
-                    <li>
-                        <div class="skillContainer">
-                            <i class="devicon-firebase-plain" aria-hidden="true"></i>
-                            <p>Firebase</p>
-                        </div>
+                    <li class="skillContainer">
+                        <i class="devicon-firebase-plain" aria-hidden="true"></i>
+                        <p>Firebase</p>
                     </li>
                 </ul>
             </div>
@@ -118,12 +104,60 @@
 
         <section class="sectionProjects" id="sectionProjects">
             <div class="wrapper">
-                <h2><i class="fa-solid fa-angle-right"></i> Projects</h2>
+                <h2><i class="fa-solid fa-angle-right" aria-hidden="true"></i> Projects</h2>
                 <p>Learn more about my past projects and the tech stack behind them. See how they work with a live link, and take a look at the code behind it.</p>
                 <ul class="projectList">
                     <li class="projectListItem">
                         <div class="imageContainer">
-                            <img src="../assets/phiXone.svg" alt="#">
+                            <img src="../assets/688x425.png" alt="#">
+                        </div>
+                        <div class="projectTextContainer">
+                            <div class="textContianer">
+                                <h3>#Project Title</h3>
+                                <p class="projectSkills bold">#HTML CSS </p>
+                                <p>#Project description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, atque?</p>
+                            </div>
+                            <div class="projectLinks">
+                                <a href="#" class="button">View Live</a>
+                                <a href="#" class="button">GitHub</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="projectListItem">
+                        <div class="imageContainer">
+                            <img src="../assets/688x425.png" alt="#">
+                        </div>
+                        <div class="projectTextContainer">
+                            <div class="textContianer">
+                                <h3>#Project Title</h3>
+                                <p class="projectSkills bold">#HTML CSS </p>
+                                <p>#Project description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, atque?</p>
+                            </div>
+                            <div class="projectLinks">
+                                <a href="#" class="button">View Live</a>
+                                <a href="#" class="button">GitHub</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="projectListItem">
+                        <div class="imageContainer">
+                            <img src="../assets/688x425.png" alt="#">
+                        </div>
+                        <div class="projectTextContainer">
+                            <div class="textContianer">
+                                <h3>#Project Title</h3>
+                                <p class="projectSkills bold">#HTML CSS </p>
+                                <p>#Project description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, atque?</p>
+                            </div>
+                            <div class="projectLinks">
+                                <a href="#" class="button">View Live</a>
+                                <a href="#" class="button">GitHub</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="projectListItem">
+                        <div class="imageContainer">
+                            <img src="../assets/688x425.png" alt="#">
                         </div>
                         <div class="projectTextContainer">
                             <div class="textContianer">
@@ -143,8 +177,8 @@
 
         <section class="sectionContact" id="sectionContact">
             <div class="wrapper">
-                <h2><i class="fa-solid fa-angle-right"></i> Contact</h2>
-                <p>Let's get in touch! You can find me via email, or send me a message here.</p>
+                <h2>Contact</h2>
+                <p>Let's get in touch.</p>
                 <ul class="contactList">
                     <li>
                         <div class="contactContainer">

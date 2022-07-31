@@ -11,6 +11,10 @@ function projectOverlay() {
     
 }
 
+// Add to app.js
+// import projectOverlay from './scripts/projectOverlay.js';
+// projectOverlay();
+
 // Add as child of .projectListItem
 {/* <div class="projectOverlay">
     <h3 aria-hidden="true">#Project Title</h3>
@@ -20,6 +24,32 @@ function projectOverlay() {
         <a href="#" class="button">GitHub</a>
     </div>
 </div> */}
+
+// Add as a style of .sectionProjects
+// .projectOverlay {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+
+//     display: none;
+//     // display: flex;
+//     flex - direction: column;
+//     gap: $spacing;
+//     justify - content: center;
+//     align - items: center;
+
+//     width: 100 %;
+//     height: 100 %;
+
+//     padding: $spacing;
+
+//     background - color: rgba($color: #000000, $alpha: 0.6);
+
+//     h3, p {
+//         margin - bottom: 0;
+//         color: $colorSix;
+//     }
+// }
 
 
 export default projectOverlay;

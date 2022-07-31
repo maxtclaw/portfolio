@@ -12,3 +12,32 @@
     display: flex;
     flex-direction: column;
 }
+
+// Breakpoint Mixin
+@mixin breakpointStyling ($breakpoint) {
+    @if $breakpoint == large {
+        @media only screen and (min-width: $largeBreakpoint) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint == medium {
+        @media only screen and (min-width: $mediumBreakpoint) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint == small {
+        @media only screen and (min-width: $smallBreakpoint) {
+            @content;
+        }
+    }
+
+    @else {
+        @media only screen and (min-width: $breakpoint) {
+            @content;
+        }
+    }
+
+    ;
+}
