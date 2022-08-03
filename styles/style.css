@@ -236,12 +236,12 @@ html {
 }
 
 * {
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  transition-property: transform, opacity;
-  transition-property: transform, opacity, -webkit-transform;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  -webkit-transition-property: opacity, font-size, -webkit-transform;
+  transition-property: opacity, font-size, -webkit-transform;
+  transition-property: transform, opacity, font-size;
+  transition-property: transform, opacity, font-size, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 html {
@@ -303,29 +303,29 @@ h3, h4 {
 
 h1 {
   font-weight: 700;
-  font-size: 2.3rem;
+  font-size: clamp(2rem, 1.8662rem + 0.7643vw, 2.6rem);
 }
 
 h2 {
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: clamp(1.5rem, 1.3662rem + 0.7643vw, 2.1rem);
 }
 
 h3 {
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 0.9108rem + 0.5096vw, 1.4rem);
 }
 
 h4 {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 0.8554rem + 0.2548vw, 1.1rem);
 }
 
 a,
 p {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 0.7777rem + 0.1274vw, 0.9rem);
 }
 
 a {
@@ -433,6 +433,9 @@ nav ol {
 nav ol a {
   font-size: 2rem;
 }
+nav ol a:hover {
+  font-size: 2.5rem;
+}
 
 .sectionHeader {
   background-color: #354F52;
@@ -472,6 +475,13 @@ nav ol a {
 }
 .sectionHeader .textContainer h1 {
   margin-bottom: 0;
+}
+.sectionHeader .textContainer p {
+  margin-top: 0;
+  letter-spacing: 0.05rem;
+}
+.sectionHeader a {
+  padding: calc(0.25 * (8px + 1.5625vw));
 }
 
 .sectionAbout {

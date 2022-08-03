@@ -22,5 +22,13 @@
         h1 {
             margin-bottom: 0;
         }
+        p {
+            margin-top: 0;
+            letter-spacing: 0.05 * $fontSizeBase;
+        }
+    }
+    
+    a {
+        padding: calc(0.25 * $spacing);
     }
 }
