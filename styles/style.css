@@ -236,17 +236,17 @@ html {
 }
 
 * {
-  -webkit-transition-property: opacity, font-size, -webkit-transform;
-  transition-property: opacity, font-size, -webkit-transform;
-  transition-property: transform, opacity, font-size;
-  transition-property: transform, opacity, font-size, -webkit-transform;
+  -webkit-transition-property: background-color, opacity, color, font-size, -webkit-transform;
+  transition-property: background-color, opacity, color, font-size, -webkit-transform;
+  transition-property: transform, background-color, opacity, color, font-size;
+  transition-property: transform, background-color, opacity, color, font-size, -webkit-transform;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding: 50px;
+  scroll-padding: 64px;
 }
 
 section {
@@ -383,6 +383,7 @@ nav .navBar {
   width: 100%;
   height: 64px;
   padding: calc(0.5 * (8px + 1.5625vw));
+  padding-left: calc(0.75 * (8px + 1.5625vw));
   background-color: #FFF;
   border-bottom: 2px solid #2F3E46;
 }
@@ -391,11 +392,9 @@ nav .navBar h4 {
   color: transparent;
   text-shadow: 0 0 0 #000;
 }
-nav .navBar button {
-  background-color: transparent;
-  border: none;
-}
 nav .navBar .hamburgerButton {
+  margin: 0;
+  padding: 0;
   width: 2rem;
   height: 2rem;
   display: -webkit-box;
@@ -409,11 +408,56 @@ nav .navBar .hamburgerButton {
           align-items: center;
   font-size: 1.75rem;
   pointer-events: auto;
-}
-nav ol {
+  cursor: pointer;
   position: relative;
+}
+nav .navBar .hamburgerButton span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 80%;
+  background: #000;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+nav .navBar .hamburgerButton span:nth-child(1) {
+  top: 6px;
+}
+nav .navBar .hamburgerButton span:nth-child(2) {
+  top: 18px;
+}
+nav .navBar .hamburgerButton span:nth-child(3) {
+  top: 30px;
+}
+nav .navBar .hamburgerButton:hover span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 50%;
+  top: 18px;
+  left: 0px;
+}
+nav .navBar .hamburgerButton:hover span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+nav .navBar .hamburgerButton:hover span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 50%;
+  top: 18px;
+  left: 12px;
+}
+nav .navDropdown {
+  position: relative;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   width: 100%;
-  height: 100%;
+  height: calc(100% - 50px);
   pointer-events: auto;
   background-color: #84A98C;
   display: -webkit-box;
@@ -430,10 +474,10 @@ nav ol {
       -ms-flex-align: center;
           align-items: center;
 }
-nav ol a {
+nav .navDropdown a {
   font-size: 2rem;
 }
-nav ol a:hover {
+nav .navDropdown a:hover {
   font-size: 2.5rem;
 }
 
@@ -482,6 +526,27 @@ nav ol a:hover {
 }
 .sectionHeader a {
   padding: calc(0.25 * (8px + 1.5625vw));
+  margin: 0 auto;
+  height: 36px;
+  width: 36px;
+  border: 2px solid #F6FFF8;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sectionHeader a:hover {
+  background-color: rgba(246, 255, 248, 0.25);
 }
 
 .sectionAbout {
@@ -623,20 +688,43 @@ footer p {
   margin: 0;
 }
 
-nav .navDropdown {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+nav .hamburgerButton.hamburgerButtonActive span:nth-child(1) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 75%;
+  top: 18px;
+  left: 0px;
+}
+nav .hamburgerButton.hamburgerButtonActive span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+nav .hamburgerButton.hamburgerButtonActive span:nth-child(3) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 75%;
+  top: 18px;
+  left: 0px;
+}
+nav .hamburgerButton.hamburgerButtonActive:hover span:nth-child(1) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 50%;
+  top: 18px;
+  left: 0px;
+}
+nav .hamburgerButton.hamburgerButtonActive:hover span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+nav .hamburgerButton.hamburgerButtonActive:hover span:nth-child(3) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 50%;
+  top: 18px;
+  left: 12px;
 }
 nav .navDropdownActive {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
-}
-
-.sectionProjects .projectOverlay {
-  display: none;
-}
-.sectionProjects .projectOverlayActive {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }

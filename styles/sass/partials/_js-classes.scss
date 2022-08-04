@@ -1,22 +1,55 @@
-
-// Manage dropdown visibility of navigational menu
-// hamburgerDropdown.js
+// Manage hamburger button and dropdown visibility of the navigational menu
+// These styles are adjusted in hamburgerDropdown.js
 nav {
-    .navDropdown {
-        transform: translateY(-100%);
+    // Adjust hamburger button styling when active
+    .hamburgerButton {    
+        // X shape
+        &.hamburgerButtonActive {
+            span:nth-child(1) {
+                transform: rotate(-45deg);
+                width: 75%;
+                top: 18px;
+                left: 0px;
+            }
+    
+            span:nth-child(2) {
+                width: 0%;
+                opacity: 0;
+            }
+    
+            span:nth-child(3) {
+                transform: rotate(+45deg);
+                width: 75%;
+                top: 18px;
+                left: 0px;
+            }
+        }
+    
+        // Up chevron
+        &.hamburgerButtonActive:hover {
+            span:nth-child(1) {
+                transform: rotate(-45deg);
+                width: 50%;
+                top: 18px;
+                left: 0px;
+            }
+    
+            span:nth-child(2) {
+                width: 0%;
+                opacity: 0;
+            }
+    
+            span:nth-child(3) {
+                transform: rotate(+45deg);
+                width: 50%;
+                top: 18px;
+                left: 12px;
+            }
+        }
     }
 
+    // Dropdown visible when active
     .navDropdownActive {
         transform: translateY(0%);
-    }
-}
-
-.sectionProjects {
-    .projectOverlay {
-        display: none;
-    }
-
-    .projectOverlayActive {
-        display: flex;
     }
 }

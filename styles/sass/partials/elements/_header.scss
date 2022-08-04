@@ -30,5 +30,18 @@
     
     a {
         padding: calc(0.25 * $spacing);
+        margin: 0 auto;
+        height: 36px;
+        width: 36px;
+        border: 2px solid $colorSix;
+        border-radius: 50%;
+
+        @include flexRow;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: rgba($colorSix, $opacity);
+        }
     }
 }

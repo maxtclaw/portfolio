@@ -1,11 +1,11 @@
 * {
-    transition-property: transform, opacity, font-size;
+    transition-property: transform, background-color, opacity, color, font-size;
     transition-duration: 0.3s;
 }
 
 html {
     scroll-behavior: smooth;
-    scroll-padding: 50px;
+    scroll-padding: 64px;
 }
 
 section {

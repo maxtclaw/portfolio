@@ -51,5 +51,15 @@ function projectOverlay() {
 //     }
 // }
 
+// .sectionProjects {
+//     .projectOverlay {
+//         display: none;
+//     }
+
+//     .projectOverlayActive {
+//         display: flex;
+//     }
+// }
+
 
 export default projectOverlay;

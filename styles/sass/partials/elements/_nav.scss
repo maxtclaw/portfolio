@@ -13,7 +13,6 @@ nav {
         position: fixed;
         top: 0;
         left: 0;
-
         z-index: 10;
 
         @include flexRow;
@@ -23,22 +22,20 @@ nav {
         width: 100%;
         height: 64px;
         padding: calc(0.5*$spacing);
+        padding-left: calc(0.75 * $spacing);
         background-color: $colorWhite;
         border-bottom: 2px solid $colorOne;
 
-        
         h4 {
             pointer-events: auto;
             color: transparent;
             text-shadow: 0 0 0 $colorBlack;
         }
 
-        button {
-            background-color: transparent;
-            border: none;
-        }
-
+        // Hamburger Button Span Styling
         .hamburgerButton {
+            margin: 0;
+            padding: 0;
             width: calc(2 * $fontSizeBase);
             height: calc(2 * $fontSizeBase);
             
@@ -49,14 +46,66 @@ nav {
     
             // Keeps button interactable to clicks
             pointer-events: auto;
+            cursor: pointer;
+
+            position: relative;
+
+            // Default hamburger bars
+            span {
+                display: block;
+                position: absolute;
+                height: 4px;
+                width: 80%;
+                background: $colorBlack;
+                border-radius: 9px;
+                opacity: 1;
+                left: 0;
+                transform: rotate(0deg);
+                transition: .25s ease-in-out;
+
+                &:nth-child(1) {
+                top: 6px;
+                }
+                &:nth-child(2) {
+                    top: 18px;
+                }
+                &:nth-child(3) {
+                    top: 30px;
+                }
+            }
+
+            // Down chevron
+            &:hover {
+                span:nth-child(1) {
+                    transform: rotate(45deg);
+                    width: 50%;
+                    top: 18px;
+                    left: 0px;
+                }
+    
+                span:nth-child(2) {
+                    width: 0%;
+                    opacity: 0;
+                }
+    
+                span:nth-child(3) {
+                    transform: rotate(-45deg);
+                    width: 50%;
+                    top: 18px;
+                    left: 12px;
+                }
+            }
+
+
         }
     }
 
-    ol {
+    .navDropdown {
         position: relative;
-
+        transform: translateY(-100%);
+        
         width: 100%;
-        height: 100%;
+        height: calc(100% - 50px);
 
         // Keeps <ol> interactable to clicks
         pointer-events: auto;

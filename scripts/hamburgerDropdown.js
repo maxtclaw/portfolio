@@ -5,9 +5,9 @@ const navDropdownAnchorElementAll = document.querySelectorAll('.navDropdown a');
 
 // Helper functions
 function hamburgerDropdownToggle() {
+    // Toggle active for hamburgerButton and dropdown
+    navHamburgerButtonElement.classList.toggle('hamburgerButtonActive');
     navDropdownElement.classList.toggle('navDropdownActive');
-    navHamburgerButtonElement.classList.toggle('fa-bars');
-    navHamburgerButtonElement.classList.toggle('fa-angle-up');
 
     // Toggle aria-label for hamburger button
     // Toggle tabindex for dropdown list items depending on visibility
@@ -24,11 +24,11 @@ function hamburgerDropdownToggle() {
     }
 }
 
-// 
+// Minimize dropdown
 function hamburgerDropdownMinimize() {
+    // Add the classes, then toggle to remove them
+    navHamburgerButtonElement.classList.add('hamburgerButtonActive');
     navDropdownElement.classList.add('navDropdownActive');
-    navHamburgerButtonElement.classList.remove('fa-bars');
-    navHamburgerButtonElement.classList.add('fa-angle-up');
     hamburgerDropdownToggle();
 }
 
