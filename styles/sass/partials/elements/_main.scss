@@ -21,11 +21,12 @@
     .skillContainer {
         text-align: center;
         padding: $spacing;
+
+        i {
+            font-size: 3 * $fontSizeBase;
+        }
     }
 
-    i {
-        font-size: 3 * $fontSizeBase;
-    }
 }
 
 .sectionProjects {

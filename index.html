@@ -36,9 +36,9 @@
             </a>
 
             <div class="hamburgerButton" aria-label="open menu" tabindex="0">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </div>
         </div>
         
@@ -56,11 +56,14 @@
         <section class="sectionHeader" id="sectionHeader">
             <div class="wrapper">
                 <div class="textContainer">
-                    <!-- <h2>Introduction</h2> -->
                     <h1>Max Law</h1>
                     <p>A Toronto-based Front-End Web Developer</p>
                 </div>
-                <a href="#sectionAbout" aria-label="go to about section"><i class="fa-solid fa-angles-down"></i></a>
+                <a href="#sectionAbout" aria-label="go to about section">
+                    <i class="fa-solid fa-angles-down"></i>
+                    <div></div>
+                    <div></div>
+                </a>
             </div>
         </section>
     </header>

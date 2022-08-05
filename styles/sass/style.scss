@@ -5,11 +5,11 @@
 
 @import "./partials/base-styles";
 @import "./partials/typography";
+@import "./partials/animations.scss";
 
 @import "./partials/elements/nav";
 @import "./partials/elements/header";
 @import "./partials/elements/main";
 @import "./partials/elements/footer";
 
-// Currently Unused
-@import "./partials/js-classes"
+@import "./partials/js-classes";

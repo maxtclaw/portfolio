@@ -355,6 +355,31 @@ ol, ul {
   text-align: center;
 }
 
+@-webkit-keyframes animationPulse {
+  0% {
+    opacity: 0.5;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@keyframes animationPulse {
+  0% {
+    opacity: 0.5;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
 nav {
   position: fixed;
   width: 100%;
@@ -527,9 +552,8 @@ nav .navDropdown a:hover {
 .sectionHeader a {
   padding: calc(0.25 * (8px + 1.5625vw));
   margin: 0 auto;
-  height: 36px;
-  width: 36px;
-  border: 2px solid #F6FFF8;
+  height: clamp(1.5rem, 1.3662rem + 0.7643vw, 2.1rem);
+  width: clamp(1.5rem, 1.3662rem + 0.7643vw, 2.1rem);
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -544,9 +568,24 @@ nav .navDropdown a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 .sectionHeader a:hover {
   background-color: rgba(246, 255, 248, 0.25);
+}
+.sectionHeader a div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: 1px solid #F6FFF8;
+  border-radius: 50%;
+}
+.sectionHeader a div:last-of-type {
+  -webkit-animation: animationPulse 1.5s ease-out infinite;
+          animation: animationPulse 1.5s ease-out infinite;
 }
 
 .sectionAbout {
@@ -585,7 +624,7 @@ nav .navDropdown a:hover {
   text-align: center;
   padding: calc(8px + 1.5625vw);
 }
-.sectionSkills i {
+.sectionSkills .skillContainer i {
   font-size: 3rem;
 }
 
