@@ -3,6 +3,9 @@ footer {
     color: $colorSix;
     text-align: center;
 
+    .wrapper {
+        padding: calc(0.5 * $spacing);
+    }
     p {
         margin: 0;
     }

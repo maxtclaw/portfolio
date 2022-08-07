@@ -25,163 +25,160 @@
     <!-- Dev Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
+    <!-- Fade-in Text JS Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body>
 
+    <!-- Navigation Menu -->
     <nav>
+        <div class="wrapper">
+            <div class="navBar">
+                <a href="#header">
+                    <h4><span aria-hidden="true">🌱</span> Max Law</h4>
+                </a>
 
-        <div class="navBar">
-            <a href="#sectionHeader">
-                <h4>🌱 Max Law</h4>
-            </a>
-
-            <div class="hamburgerButton" aria-label="open menu" tabindex="0">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
+                <div class="hamburgerButton" aria-label="open menu" tabindex="0">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </div>
             </div>
+            
+            <ol class="navDropdown">
+                <li><a class="bold" href="#header" tabindex="-1">Introduction</a></li>
+                <li><a class="bold" href="#about" tabindex="-1">About</a></li>
+                <li><a class="bold" href="#skills" tabindex="-1">Skills</a></li>
+                <li><a class="bold" href="#projects" tabindex="-1">Projects</a></li>
+                <li><a class="bold" href="#contact" tabindex="-1">Contact</a></li>
+            </ol>
         </div>
-        
-        <ol class="navDropdown">
-            <li><a class="bold" href="#sectionHeader" tabindex="-1">Introduction</a></li>
-            <li><a class="bold" href="#sectionAbout" tabindex="-1">About</a></li>
-            <li><a class="bold" href="#sectionSkills" tabindex="-1">Skills</a></li>
-            <li><a class="bold" href="#sectionProjects" tabindex="-1">Projects</a></li>
-            <li><a class="bold" href="#sectionContact" tabindex="-1">Contact</a></li>
-        </ol>
-
     </nav>
 
+    <!-- Header -->
     <header>
-        <section class="sectionHeader" id="sectionHeader">
+        <section class="header" id="header">
             <div class="wrapper">
                 <div class="textContainer">
                     <h1>Max Law</h1>
-                    <p>A Toronto-based Front-End Web Developer</p>
+                    <p>A Growing Front-End Web Developer</p>
                 </div>
-                <a href="#sectionAbout" aria-label="go to about section">
+                <a href="#about" aria-label="go to about section">
                     <i class="fa-solid fa-angles-down"></i>
-                    <div></div>
-                    <div></div>
+                    <div aria-hidden="true"></div>
+                    <div aria-hidden="true"></div>
                 </a>
             </div>
         </section>
     </header>
 
+    <!-- Main Content -->
     <main>
-        <section class="sectionAbout" id="sectionAbout">
+        <!-- About Section -->
+        <section class="about" id="about">
             <div class="wrapper">
                 <div class="textContainer">
-                    <h2><i class="fa-solid fa-angle-right" aria-hidden="true"></i> About Me</h2>
-                    <h3>Max Law</h3>
-                    <p># Lorem ipsum dolor sit amet consectetur adipisicing elit. Est similique repellendus repellat velit repudiandae ea nisi, in mollitia hic fugiat.</p>
-                    <p># Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, dignissimos debitis cupiditate, animi autem quidem ad sapiente distinctio soluta temporibus dolore nihil, error ducimus! Quisquam ducimus cumque eius! Quisquam, animi!</p>
+                    <div class="textContainer" data-aos="fade-right">
+                        <h2 data-aos="fade-right"><i class="fa-solid fa-angle-right" aria-hidden="true"></i> About Me</h2>
+                        <p>Hello! I’m Max, a <span class="bold">Front-End Developer</span> from Juno College, and Mechanical Engineering graduate with high honours from the University of Toronto. With an eye for detail and a structured approach to problems, I keep my solutions clean and concise.</p>
+                        <p>I’m a quick learner, and passionate about growing, trying new things, and learning new skills. When I’m not building websites, you can find me trying to improve my gaming skills, or attempting to catch up on a large backlog of videos...</p> 
+                    </div>
+                </div>
+                <div class="imageContainer" data-aos="fade-up">
+                    <img src="../assets/about.png" alt="">
                 </div>
             </div>
         </section>
 
-        <section class="sectionSkills" id="sectionSkills">
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
             <div class="wrapper">
-                <h2>Skills</h2>
+                <h2 data-aos="fade-down">Skills</h2>
                 <ul class="skillList">
-                    <li class="skillContainer">
+                    <li class="skillContainer" data-aos="fade-up">
                         <i class="devicon-html5-plain" aria-hidden="true"></i>
                         <p>HTML</p>
                     </li>
-                    <li class="skillContainer">
+                    <li class="skillContainer" data-aos="fade-up">
                         <i class="devicon-css3-plain" aria-hidden="true"></i>
                         <p>CSS</p>
                     </li>
-                    <li class="skillContainer">
+                    <li class="skillContainer" data-aos="fade-up">
                         <i class="devicon-sass-original" aria-hidden="true"></i>
                         <p>SASS</p>
                     </li>
-                    <li class="skillContainer">
+                    <li class="skillContainer" data-aos="fade-up">
                         <i class="devicon-javascript-plain" aria-hidden="true"></i>
                         <p>JavaScript</p>
                     </li>
-                    <li class="skillContainer">
-                        <i class="devicon-github-original" aria-hidden="true"></i>
-                        <p>GitHub</p>
-                    </li>
-                    <li class="skillContainer">
+                    <li class="skillContainer" data-aos="fade-up">
                         <i class="devicon-react-original" aria-hidden="true"></i>
                         <p>React</p>
                     </li>
-                    <li class="skillContainer">
+                    <li class="skillContainer" data-aos="fade-up">
                         <i class="devicon-firebase-plain" aria-hidden="true"></i>
                         <p>Firebase</p>
                     </li>
+                    <li class="skillContainer" data-aos="fade-up">
+                        <i class="devicon-git-plain" aria-hidden="true"></i>
+                        <p>Git</p>
+                    </li>
+                    <li class="skillContainer" data-aos="fade-up">
+                        <i class="devicon-github-original" aria-hidden="true"></i>
+                        <p>GitHub</p>
+                    </li>
+                    <li class="skillContainer" data-aos="fade-up">
+                        <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+                        <p>and more</p>
+                    </li>
                 </ul>
             </div>
         </section>
 
-        <section class="sectionProjects" id="sectionProjects">
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
             <div class="wrapper">
-                <h2><i class="fa-solid fa-angle-right" aria-hidden="true"></i> Projects</h2>
-                <p>Learn more about my past projects and the tech stack behind them. See how they work with a live link, and take a look at the code behind it.</p>
+                <h2 data-aos="fade-right"><i class="fa-solid fa-angle-right" aria-hidden="true"></i> Projects</h2>
                 <ul class="projectList">
-                    <li class="projectListItem">
+                    <li class="projectListItem" data-aos="fade-up">
                         <div class="imageContainer">
-                            <img src="../assets/688x425.png" alt="#">
+                            <img class="hoverHide" src="../assets/world-urban-score-1.png" alt="World Urban Score website header with continent and city selection options.">
+                            <img src="../assets/world-urban-score-2.png" alt="World Urban Score website showing scores and description for Toronto.">
                         </div>
                         <div class="projectTextContainer">
                             <div class="textContianer">
-                                <h3>#Project Title</h3>
-                                <p class="projectSkills bold">#HTML CSS </p>
-                                <p>#Project description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, atque?</p>
+                                <h3 class="bold">World Urban Score</h3>
+                                <ul class="projectSkills bold">
+                                    <li>HTML</li>
+                                    <li>SASS</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                                <p>A place to check various quality of life factors for urban areas around the world. The website connects to multiple endpoints in the Teleport API, and is made entirely through pair programming.</p>
                             </div>
                             <div class="projectLinks">
-                                <a href="#" class="button">View Live</a>
-                                <a href="#" class="button">GitHub</a>
+                                <a href="https://world-urban-score.netlify.app/" class="button">View Live</a>
+                                <a href="https://github.com/Max-Chow-project2/urban-score" class="button">GitHub</a>
                             </div>
                         </div>
                     </li>
-                    <li class="projectListItem">
+                    <li class="projectListItem" data-aos="fade-up">
                         <div class="imageContainer">
-                            <img src="../assets/688x425.png" alt="#">
+                            <img class="hoverHide" src="../assets/creative-1.png" alt="Creative website's header with a navigation bar.">
+                            <img src="../assets/creative-2.png" alt="Creative website's contact page.">
                         </div>
                         <div class="projectTextContainer">
                             <div class="textContianer">
-                                <h3>#Project Title</h3>
-                                <p class="projectSkills bold">#HTML CSS </p>
-                                <p>#Project description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, atque?</p>
+                                <h3 class="bold">Creative</h3>
+                                <ul class="projectSkills bold">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                                <p>Conversion of a website design to a multi-page website template (Home, Blog, Contact) with basic navigational functionality, accessibility features, and responsive styling.</p>
                             </div>
                             <div class="projectLinks">
-                                <a href="#" class="button">View Live</a>
-                                <a href="#" class="button">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="projectListItem">
-                        <div class="imageContainer">
-                            <img src="../assets/688x425.png" alt="#">
-                        </div>
-                        <div class="projectTextContainer">
-                            <div class="textContianer">
-                                <h3>#Project Title</h3>
-                                <p class="projectSkills bold">#HTML CSS </p>
-                                <p>#Project description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, atque?</p>
-                            </div>
-                            <div class="projectLinks">
-                                <a href="#" class="button">View Live</a>
-                                <a href="#" class="button">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="projectListItem">
-                        <div class="imageContainer">
-                            <img src="../assets/688x425.png" alt="#">
-                        </div>
-                        <div class="projectTextContainer">
-                            <div class="textContianer">
-                                <h3>#Project Title</h3>
-                                <p class="projectSkills bold">#HTML CSS </p>
-                                <p>#Project description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, atque?</p>
-                            </div>
-                            <div class="projectLinks">
-                                <a href="#" class="button">View Live</a>
-                                <a href="#" class="button">GitHub</a>
+                                <a href="https://css-creative.netlify.app/" class="button">View Live</a>
+                                <a href="https://github.com/maxtclaw/creative" class="button">GitHub</a>
                             </div>
                         </div>
                     </li>
@@ -189,8 +186,9 @@
             </div>
         </section>
 
-        <section class="sectionContact" id="sectionContact">
-            <div class="wrapper">
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="wrapper" data-aos="fade-up">
                 <h2>Contact</h2>
                 <p>Let's get in touch.</p>
                 <ul class="contactList">
@@ -217,12 +215,19 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="wrapper">
-            <p>#Footer text Lorem ipsum dolor sit amet.</p>
+            <p>This website was created and cultivated with care 🌿 Max Law</p>
         </div>
     </footer>
 
     <script type="module" src="./app.js"></script>
+
+    <!-- Fade-in Library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

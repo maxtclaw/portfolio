@@ -236,10 +236,10 @@ html {
 }
 
 * {
-  -webkit-transition-property: background-color, opacity, color, font-size, -webkit-transform;
-  transition-property: background-color, opacity, color, font-size, -webkit-transform;
-  transition-property: transform, background-color, opacity, color, font-size;
-  transition-property: transform, background-color, opacity, color, font-size, -webkit-transform;
+  -webkit-transition-property: bottom, background-color, opacity, color, font-size, -webkit-transform;
+  transition-property: bottom, background-color, opacity, color, font-size, -webkit-transform;
+  transition-property: transform, bottom, background-color, opacity, color, font-size;
+  transition-property: transform, bottom, background-color, opacity, color, font-size, -webkit-transform;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
@@ -269,6 +269,7 @@ img {
   margin: 0;
   padding: calc(0.125 * (8px + 1.5625vw)) calc(0.5 * (8px + 1.5625vw));
   border: 1px solid #000;
+  border-radius: 5px;
   font-weight: bold;
 }
 .button:hover {
@@ -337,6 +338,7 @@ ol, ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: clamp(0.8rem, 0.7777rem + 0.1274vw, 0.9rem);
 }
 
 .bold {
@@ -345,14 +347,6 @@ ol, ul {
 
 .italic {
   font-style: italic;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.center {
-  text-align: center;
 }
 
 @-webkit-keyframes animationPulse {
@@ -382,10 +376,14 @@ ol, ul {
 }
 nav {
   position: fixed;
-  width: 100%;
-  height: 100%;
   z-index: 10;
   pointer-events: none;
+}
+nav .wrapper {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 }
 nav .navBar {
   position: fixed;
@@ -478,9 +476,8 @@ nav .navBar .hamburgerButton:hover span:nth-child(3) {
   left: 12px;
 }
 nav .navDropdown {
-  position: relative;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  position: absolute;
+  bottom: 100%;
   width: 100%;
   height: calc(100% - 50px);
   pointer-events: auto;
@@ -506,14 +503,12 @@ nav .navDropdown a:hover {
   font-size: 2.5rem;
 }
 
-.sectionHeader {
+.header {
   background-color: #354F52;
   background-image: url("../../assets/dots.svg");
   background-repeat: repeat-y;
   background-size: cover;
-  background-position: bottom;
-  -webkit-transform: translateY(-2.5%);
-          transform: translateY(-2.5%);
+  background-position: 16px 26px;
   text-align: center;
   color: #F6FFF8;
   margin-top: 50px;
@@ -530,7 +525,7 @@ nav .navDropdown a:hover {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.sectionHeader .textContainer {
+.header .textContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -542,14 +537,14 @@ nav .navDropdown a:hover {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.sectionHeader .textContainer h1 {
+.header .textContainer h1 {
   margin-bottom: 0;
 }
-.sectionHeader .textContainer p {
+.header .textContainer p {
   margin-top: 0;
   letter-spacing: 0.05rem;
 }
-.sectionHeader a {
+.header a {
   padding: calc(0.25 * (8px + 1.5625vw));
   margin: 0 auto;
   height: clamp(1.5rem, 1.3662rem + 0.7643vw, 2.1rem);
@@ -570,10 +565,10 @@ nav .navDropdown a:hover {
           align-items: center;
   position: relative;
 }
-.sectionHeader a:hover {
+.header a:hover {
   background-color: rgba(246, 255, 248, 0.25);
 }
-.sectionHeader a div {
+.header a div {
   position: absolute;
   top: 0;
   left: 0;
@@ -583,21 +578,44 @@ nav .navDropdown a:hover {
   border: 1px solid #F6FFF8;
   border-radius: 50%;
 }
-.sectionHeader a div:last-of-type {
+.header a div:last-of-type {
   -webkit-animation: animationPulse 1.5s ease-out infinite;
           animation: animationPulse 1.5s ease-out infinite;
 }
 
-.sectionAbout {
+.about {
   background-color: #FFF;
 }
+.about .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.about .imageContainer {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .about .imageContainer {
+    display: block;
+  }
+}
 
-.sectionSkills {
+.skills {
   background-color: #354F52;
   color: #F6FFF8;
   text-align: center;
 }
-.sectionSkills .wrapper {
+.skills .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -606,7 +624,7 @@ nav .navDropdown a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.sectionSkills .skillList {
+.skills .skillList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -620,18 +638,19 @@ nav .navDropdown a:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.sectionSkills .skillContainer {
+.skills .skillContainer {
   text-align: center;
   padding: calc(8px + 1.5625vw);
 }
-.sectionSkills .skillContainer i {
+.skills .skillContainer i {
   font-size: 3rem;
 }
 
-.sectionProjects {
+.projects {
   background-color: #F6FFF8;
+  padding-bottom: calc(3 * (8px + 1.5625vw));
 }
-.sectionProjects .projectList {
+.projects .projectList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -642,7 +661,7 @@ nav .navDropdown a:hover {
   gap: calc(8px + 1.5625vw);
 }
 @media only screen and (min-width: 768px) {
-  .sectionProjects .projectList {
+  .projects .projectList {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -651,10 +670,12 @@ nav .navDropdown a:hover {
         flex-wrap: wrap;
   }
 }
-.sectionProjects .projectListItem {
+.projects .projectListItem {
   position: relative;
   background-color: #FFF;
   border: 1px solid #2F3E46;
+  border-radius: 10px;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -662,21 +683,89 @@ nav .navDropdown a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
+.projects .projectListItem .imageContainer {
+  display: block;
+  position: relative;
+}
+.projects .projectListItem .imageContainer img {
+  border-radius: 5px;
+}
+.projects .projectListItem .imageContainer .hoverHide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  -webkit-transition: top 0s, left 0s, opacity 0.3s;
+  transition: top 0s, left 0s, opacity 0.3s;
+}
+.projects .projectListItem .imageContainer .hoverHide:hover {
+  opacity: 0;
+}
+.projects .projectListItem .projectTextContainer {
+  display: block;
+  padding: min(16px, 8px + 1.5625vw) calc(8px + 1.5625vw);
+}
+@media only screen and (min-width: 1000px) {
+  .projects .projectListItem .projectTextContainer {
+    width: max(500px, 60%);
+  }
+}
+.projects .projectListItem .projectTextContainer h3 {
+  margin-top: calc(0.25 * (8px + 1.5625vw));
+  margin-bottom: calc(0.5 * (8px + 1.5625vw));
+}
+.projects .projectListItem .projectTextContainer .projectSkills {
+  display: inline;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #354F52;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: calc(0.5 * (8px + 1.5625vw));
+}
+.projects .projectListItem .projectTextContainer .projectSkills li {
+  margin: 0;
+  padding: calc(0.125 * (8px + 1.5625vw)) calc(0.5 * (8px + 1.5625vw));
+  background-color: #F6FFF8;
+  border: 1px solid #000;
+  border-radius: 15px;
+  font-weight: 600;
+}
+.projects .projectListItem .projectTextContainer p {
+  margin-top: calc(0.5 * (8px + 1.5625vw));
+  margin-bottom: calc(0.5 * (8px + 1.5625vw));
+}
+.projects .projectListItem .projectTextContainer .projectLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: min(16px, 8px + 1.5625vw);
+}
 @media only screen and (min-width: 768px) {
-  .sectionProjects .projectListItem {
+  .projects .projectListItem {
     -ms-flex-preferred-size: calc(50% - (8px + 1.5625vw));
         flex-basis: calc(50% - (8px + 1.5625vw));
   }
 }
 @media only screen and (min-width: 1000px) {
-  .sectionProjects .projectListItem {
+  .projects .projectListItem {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -690,29 +779,23 @@ nav .navDropdown a:hover {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
-  .sectionProjects .projectListItem img {
+  .projects .projectListItem .imageContainer {
+    padding: min(16px, 8px + 1.5625vw);
+  }
+  .projects .projectListItem .imageContainer img {
     max-height: 250px;
   }
-}
-.sectionProjects .projectListItem .imageContainer {
-  display: block;
-}
-.sectionProjects .projectListItem .projectTextContainer {
-  display: block;
-  padding: calc(8px + 1.5625vw);
-}
-.sectionProjects .projectListItem .projectTextContainer h3 {
-  margin-top: calc(0.25 * (8px + 1.5625vw));
-  margin-bottom: 0;
-}
-.sectionProjects .projectListItem .projectTextContainer .projectSkills {
-  color: #354F52;
-}
-.sectionProjects .projectListItem .projectTextContainer p:not(:last-child) {
-  margin: 0;
+  .projects .projectListItem .imageContainer .hoverHide {
+    height: calc(100% - 2 * min(16px, 8px + 1.5625vw));
+    width: calc(100% - 2 * min(16px, 8px + 1.5625vw));
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 
-.sectionContact {
+.contact {
   background-color: #52796F;
   color: #F6FFF8;
   text-align: center;
@@ -722,6 +805,9 @@ footer {
   background-color: #000;
   color: #F6FFF8;
   text-align: center;
+}
+footer .wrapper {
+  padding: calc(0.5 * (8px + 1.5625vw));
 }
 footer p {
   margin: 0;
@@ -764,6 +850,5 @@ nav .hamburgerButton.hamburgerButtonActive:hover span:nth-child(3) {
   left: 12px;
 }
 nav .navDropdownActive {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
+  bottom: 50px;
 }

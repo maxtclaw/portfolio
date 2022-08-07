@@ -63,6 +63,8 @@ ol, ul {
     margin: 0;
     padding: 0;
     list-style: none;
+
+    font-size: clamp(0.8 * $fontSizeBase, 0.7777 * $fontSizeBase + 0.1274vw, 0.9 * $fontSizeBase)
 }
 
 // Class Styling
@@ -72,12 +74,4 @@ ol, ul {
 
 .italic {
     font-style: italic;
-}
-
-.uppercase {
-    text-transform: uppercase;
-}
-
-.center {
-    text-align: center;
 }

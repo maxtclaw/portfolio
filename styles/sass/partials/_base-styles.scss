@@ -1,5 +1,5 @@
 * {
-    transition-property: transform, background-color, opacity, color, font-size;
+    transition-property: transform, bottom, background-color, opacity, color, font-size;
     transition-duration: 0.3s;
 }
 
@@ -24,17 +24,18 @@ img {
 }
 
 .button {
-    background-color: $testSix;
+    background-color: $colorHighlight;
     margin: 0;
     padding: calc(0.125 * $spacing) calc(0.5 * $spacing);
     border: 1px solid $colorBlack;
+    border-radius: 5px;
     
     font-weight: bold;
 
     &:hover {
-        color: $testSix;
+        color: $colorHighlight;
         background-color: $colorBlack;
-        border: 1px solid $testSix;
+        border: 1px solid $colorHighlight;
     }
 }
 

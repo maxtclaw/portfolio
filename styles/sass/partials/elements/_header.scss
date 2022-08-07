@@ -1,10 +1,11 @@
-.sectionHeader {
+.header {
+    // Background pattern styling
     background-color: $colorTwo;
     background-image: url("../../assets/dots.svg");
     background-repeat: repeat-y;
     background-size: cover;
-    background-position: bottom;
-    transform: translateY(-2.5%);
+    background-position: 16px 26px;
+
     text-align: center;
     color: $colorSix;
 

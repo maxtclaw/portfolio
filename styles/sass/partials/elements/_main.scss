@@ -1,8 +1,23 @@
-.sectionAbout {
+.about {
     background-color: $colorWhite;
+
+    .wrapper {
+        @include flexRow;
+        justify-content: center;
+        align-items: center;
+    }
+    .imageContainer {
+        display: none;
+    }
+
+    @include breakpointStyling($mediumBreakpoint) {
+        .imageContainer {
+            display: block;
+        }
+    }
 }
 
-.sectionSkills {
+.skills {
     background-color: $colorTwo;
     color: $colorSix;
 
@@ -29,9 +44,11 @@
 
 }
 
-.sectionProjects {
+.projects {
     background-color: $colorSix;
+    padding-bottom: calc(3 * $spacing);
 
+    // Primary layout
     .projectList {
         @include flexCol;
         gap: $spacing;
@@ -42,15 +59,87 @@
         }
     }
 
+    // Holds each project
     .projectListItem {
         position: relative;
         
         background-color: $colorWhite;
         border: 1px solid $colorOne;
+        border-radius: 10px;
+        overflow: hidden;
         
         @include flexCol;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-start;
+
+
+        // Project Image
+        .imageContainer {
+            display: block;
+            position: relative;
+
+            img {
+                border-radius: 5px;
+            }
+            
+            .hoverHide {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 1;
+                transition: top 0s, left 0s, opacity 0.3s;
+
+                &:hover {
+                    opacity: 0;
+                }
+            }
+        }
+
+        // Project Title, Skills, Description, and Links
+        .projectTextContainer {
+            display: block;
+            padding: min(16px, $spacing) $spacing;
+
+            @include breakpointStyling ($largeBreakpoint) {
+                width: max(500px, 60%);
+            }
+            
+            h3 {
+                margin-top: calc(0.25 * $spacing);
+                margin-bottom: calc(0.5 * $spacing);
+            }
+
+            .projectSkills {
+                display: inline;
+                font-family: $fontFamilyHeading;
+                color: $colorTwo;
+                
+                @include flexRow;
+                flex-wrap: wrap;
+                gap: calc(0.5 * $spacing);
+                
+                li {
+                    margin: 0;
+                    padding: calc(0.125 * $spacing) calc(0.5 * $spacing);
+                    background-color: $colorSix;
+                    border: 1px solid $colorBlack;
+                    border-radius: 15px;
+                    font-weight: 600;
+
+                }
+            }
+
+            p {
+                margin-top: calc(0.5 * $spacing);
+                margin-bottom: calc(0.5 * $spacing);
+            }
+
+            .projectLinks {
+                @include flexRow;
+                gap: min(16px, $spacing);
+            }
+
+        }
 
         // Two cards per row
         @include breakpointStyling ($mediumBreakpoint) {
@@ -65,38 +154,30 @@
             align-items: center;
             flex-basis: 100%;
 
-            img {
-                max-height: 250px;
-            }
-        }
+            .imageContainer {
+                padding: min(16px, $spacing);
+                img {
+                    max-height: 250px;
 
-        .imageContainer {
-            display: block;
-        }
+                }
+    
+                .hoverHide {
+                    height: calc(100% - 2*min(16px, $spacing));
+                    width: calc(100% - 2*min(16px, $spacing));
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
 
-        .projectTextContainer {
-            display: block;
-            padding: $spacing;
-            h3 {
-                margin-top: calc(0.25 * $spacing);
-                margin-bottom: 0;
-            }
-            .projectSkills {
-                color: $colorTwo
-            }
-            p:not(:last-child){
-                margin: 0;
-            }
         }
-
     }
 
 }
 
-.sectionContact {
+.contact {
     background-color: $colorThree;
-
+    
     color: $colorSix;
-
     text-align: center;
 }

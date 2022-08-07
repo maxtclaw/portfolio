@@ -1,6 +1,3 @@
-// Variables start with a $
-$variableName: "variablevalue";
-
 // Fonts
 $fontFamilyHeading: 'Plus Jakarta Sans', sans-serif;
 $fontFamilySubHeading: 'Plus Jakarta Sans', sans-serif;
@@ -8,20 +5,6 @@ $fontFamilyBody: 'Plus Jakarta Sans', sans-serif;
 $fontSizeBase: 1rem;
 
 // Colours
-// $colorOne: #14080E;
-// $colorTwo: #365C46;
-// $colorThree: #B6CAA2;
-// $colorFour: #F8F4F3;
-// $colorFive: #F7E4DC;
-// $colorSix: #DB9999;
-
-// $colorOne:#6c8075;
-// $colorTwo: #6B9080;
-// $colorThree: #A4C3B2;
-// $colorFour: #CCE3DE;
-// $colorFive: #EAF4F4;
-// $colorSix: #F6FFF8;
-
 $colorOne:#2F3E46;
 $colorTwo: #354F52;
 $colorThree: #52796F;
@@ -29,21 +12,15 @@ $colorFour: #84A98C;
 $colorFive: #CAD2C5;
 $colorSix: #F6FFF8;
 
+$colorHighlight: #ffc3bb;
+
 $colorBlack: #000;
 $colorWhite: #FFF;
 
-$opacity: 0.25;
-
-// Test Colours
-$testOne: #167a39;
-$testTwo: #e0ffae;
-$testThree: #ffef85;
-$testFour: #7aecff;
-$testFive: #fff9ec;
-$testSix: #ffc3bb;
-
 // Spacing, from https: //matthewjamestaylor.com/responsive-padding
 $spacing: calc(8px + 1.5625vw);
+
+$opacity: 0.25;
 
 // Breakpoints
 $largeBreakpoint: 1000px;
