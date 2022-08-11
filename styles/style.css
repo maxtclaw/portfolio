@@ -405,21 +405,20 @@ nav .navBar {
           align-items: center;
   width: 100%;
   height: 64px;
-  padding: calc(0.5 * (8px + 1.5625vw));
-  padding-left: calc(0.75 * (8px + 1.5625vw));
-  background-color: #FFF;
-  border-bottom: 2px solid #2F3E46;
+  padding: 0 calc(0.75 * (8px + 1.5625vw));
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #2F3E46;
 }
 nav .navBar h4 {
   pointer-events: auto;
+  margin: 0;
   color: transparent;
   text-shadow: 0 0 0 #000;
 }
 nav .navBar .hamburgerButton {
-  margin: 0;
   padding: 0;
-  width: 2rem;
-  height: 2rem;
+  width: 36px;
+  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,7 +437,7 @@ nav .navBar .hamburgerButton span {
   display: block;
   position: absolute;
   height: 4px;
-  width: 80%;
+  width: 100%;
   background: #000;
   border-radius: 9px;
   opacity: 1;
@@ -460,7 +459,7 @@ nav .navBar .hamburgerButton span:nth-child(3) {
 nav .navBar .hamburgerButton:hover span:nth-child(1) {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  width: 50%;
+  width: 60%;
   top: 18px;
   left: 0px;
 }
@@ -471,15 +470,15 @@ nav .navBar .hamburgerButton:hover span:nth-child(2) {
 nav .navBar .hamburgerButton:hover span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  width: 50%;
+  width: 60%;
   top: 18px;
-  left: 12px;
+  left: 13px;
 }
 nav .navDropdown {
   position: absolute;
   bottom: 100%;
   width: 100%;
-  height: calc(100% - 50px);
+  height: 100%;
   pointer-events: auto;
   background-color: #84A98C;
   display: -webkit-box;
@@ -511,8 +510,8 @@ nav .navDropdown a:hover {
   background-position: 16px 26px;
   text-align: center;
   color: #F6FFF8;
-  margin-top: 50px;
-  height: 100vh;
+  margin-top: 64px;
+  height: calc(100vh - 64px);
   max-height: 1000px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -538,7 +537,7 @@ nav .navDropdown a:hover {
           justify-content: center;
 }
 .header .textContainer h1 {
-  margin-bottom: 0;
+  margin: 0;
 }
 .header .textContainer p {
   margin-top: 0;
@@ -639,11 +638,32 @@ nav .navDropdown a:hover {
       flex-wrap: wrap;
 }
 .skills .skillContainer {
+  display: block;
+  margin: calc(8px + 1.5625vw);
+  width: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
-  padding: calc(8px + 1.5625vw);
 }
 .skills .skillContainer i {
   font-size: 3rem;
+}
+.skills .skillContainer:last-child i {
+  font-size: 1rem;
+}
+.skills .skillContainer:last-child i:first-of-type {
+  margin-bottom: 5px;
 }
 
 .projects {
@@ -816,9 +836,9 @@ footer p {
 nav .hamburgerButton.hamburgerButtonActive span:nth-child(1) {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  width: 75%;
+  width: 80%;
   top: 18px;
-  left: 0px;
+  left: 7px;
 }
 nav .hamburgerButton.hamburgerButtonActive span:nth-child(2) {
   width: 0%;
@@ -827,14 +847,14 @@ nav .hamburgerButton.hamburgerButtonActive span:nth-child(2) {
 nav .hamburgerButton.hamburgerButtonActive span:nth-child(3) {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  width: 75%;
+  width: 80%;
   top: 18px;
-  left: 0px;
+  left: 7px;
 }
 nav .hamburgerButton.hamburgerButtonActive:hover span:nth-child(1) {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  width: 50%;
+  width: 60%;
   top: 18px;
   left: 0px;
 }
@@ -845,10 +865,10 @@ nav .hamburgerButton.hamburgerButtonActive:hover span:nth-child(2) {
 nav .hamburgerButton.hamburgerButtonActive:hover span:nth-child(3) {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  width: 50%;
+  width: 60%;
   top: 18px;
-  left: 12px;
+  left: 13px;
 }
 nav .navDropdownActive {
-  bottom: 50px;
+  bottom: 0;
 }

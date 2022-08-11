@@ -2,14 +2,14 @@
 // These styles are adjusted in hamburgerDropdown.js
 nav {
     // Adjust hamburger button styling when active
-    .hamburgerButton {    
+    .hamburgerButton {        
         // X shape
         &.hamburgerButtonActive {
             span:nth-child(1) {
                 transform: rotate(-45deg);
-                width: 75%;
+                width: 80%;
                 top: 18px;
-                left: 0px;
+                left: 7px;
             }
     
             span:nth-child(2) {
@@ -19,9 +19,9 @@ nav {
     
             span:nth-child(3) {
                 transform: rotate(+45deg);
-                width: 75%;
+                width: 80%;
                 top: 18px;
-                left: 0px;
+                left: 7px;
             }
         }
     
@@ -29,7 +29,7 @@ nav {
         &.hamburgerButtonActive:hover {
             span:nth-child(1) {
                 transform: rotate(-45deg);
-                width: 50%;
+                width: 60%;
                 top: 18px;
                 left: 0px;
             }
@@ -41,15 +41,15 @@ nav {
     
             span:nth-child(3) {
                 transform: rotate(+45deg);
-                width: 50%;
+                width: 60%;
                 top: 18px;
-                left: 12px;
+                left: 13px;
             }
         }
     }
 
     // Dropdown visible when active
     .navDropdownActive {
-        bottom: 50px;
+        bottom: 0;
     }
 }

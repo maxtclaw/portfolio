@@ -9,8 +9,9 @@
     text-align: center;
     color: $colorSix;
 
-    margin-top: 50px;
-    height: 100vh;
+
+    margin-top: 64px;
+    height: calc(100vh - 64px);
     max-height: 1000px;
 
     @include flexCol;
@@ -21,7 +22,7 @@
         justify-content: center;
 
         h1 {
-            margin-bottom: 0;
+            margin: 0;
         }
         p {
             margin-top: 0;
@@ -43,7 +44,7 @@
         position: relative;
 
         &:hover {
-            background-color: rgba($colorSix, $opacity);
+            background-color: rgba($colorSix, $opacityLow);
         }
 
         div {

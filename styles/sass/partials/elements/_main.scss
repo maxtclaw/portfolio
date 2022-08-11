@@ -34,11 +34,24 @@
     }
 
     .skillContainer {
+        display: block;
+
+        margin: $spacing;
+        width: 4 * $fontSizeBase;
+        @include flexCol;
+        justify-content: end;
+        align-items: center;
         text-align: center;
-        padding: $spacing;
 
         i {
             font-size: 3 * $fontSizeBase;
+        }
+
+        &:last-child i {
+            font-size: 1 * $fontSizeBase;;
+            &:first-of-type {
+                margin-bottom: 5px;
+            }
         }
     }
 

@@ -20,7 +20,9 @@ $colorWhite: #FFF;
 // Spacing, from https: //matthewjamestaylor.com/responsive-padding
 $spacing: calc(8px + 1.5625vw);
 
-$opacity: 0.25;
+// Opacities
+$opacityLow: 0.25;
+$opacityHigh: 0.9;
 
 // Breakpoints
 $largeBreakpoint: 1000px;
