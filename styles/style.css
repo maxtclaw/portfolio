@@ -640,7 +640,7 @@ nav .navDropdown a:hover {
 .skills .skillContainer {
   display: block;
   margin: calc(8px + 1.5625vw);
-  width: 4rem;
+  width: 4.05rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
