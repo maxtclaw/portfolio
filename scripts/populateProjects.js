@@ -51,7 +51,7 @@ const projectsArray = [
         },
         title: `World Urban Score`,
         skills: [`HTML`, `SASS`, `JavaScript`, `API`],
-        description: `A place to check various quality of life factors for urban areas around the world. The website connects to various Teleport API endpoints, and was made through pair programming.`,
+        description: `A place to check quality of life factors for urban areas around the world. Connects to various Teleport API endpoints, and was made through pair programming.`,
         liveLink: `https://world-urban-score.netlify.app/`,
         githubLink: `https://github.com/Max-Chow-project2/urban-score`
     },
