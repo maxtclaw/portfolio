@@ -2,9 +2,9 @@
 /*
     {
         images: {
-            path1: `lorem`,
+            path1: `../assets/lorem-1.png`,
             alt1: `lorem`,
-            path2: `lorem`,
+            path2: `../assets/lorem-2.png`,
             alt2: `lorem`
         },
         title: `lorem`,
@@ -18,6 +18,19 @@
 const projectsArray = [
     {
         images: {
+            path1: `../assets/shopper-mapper-1.png`,
+            alt1: `Shopper Mapper website landing page.`,
+            path2: `../assets/shopper-mapper-2.png`,
+            alt2: `Shopper Mapper website displaying a map with nearby coffee stores.`
+        },
+        title: `Shopper Mapper`,
+        skills: [`HTML`, `CSS`, `JavaScript`, `API`, `React`],
+        description: `A Mapquest API-connected web application to find directions to nearby average shops. Created collaboratively with a 4-person team using React.`,
+        liveLink: `https://average-shopper-mapper.netlify.app/`,
+        githubLink: `https://github.com/shopper-mapper-cohort42/project-04`
+    },
+    {
+        images: {
             path1: `../assets/public-list-1.png`,
             alt1: `Public List website with list creation and browsing options.`,
             path2: `../assets/public-list-2.png`,
@@ -25,7 +38,7 @@ const projectsArray = [
         },
         title: `Public List`,
         skills: [`HTML`, `CSS`, `JavaScript`, `React`, `Firebase`],
-        description: `A Google Firebase web app built using React for users to create, save, edit, share, and browse public and private lists.`,
+        description: `A Firebase web app built using React for users to create, save, edit, share, and browse public and private lists.`,
         liveLink: `https://public-list-production.netlify.app/`,
         githubLink: `https://github.com/maxtclaw/public-list`
     },
@@ -37,8 +50,8 @@ const projectsArray = [
             alt2: `World Urban Score website showing scores and description for Toronto.`
         },
         title: `World Urban Score`,
-        skills: [`HTML`, `SASS`, `JavaScript`],
-        description: `A place to check various quality of life factors for urban areas around the world. The website connects to multiple endpoints in the Teleport API, and is made entirely through pair programming.`,
+        skills: [`HTML`, `SASS`, `JavaScript`, `API`],
+        description: `A place to check various quality of life factors for urban areas around the world. The website connects to various Teleport API endpoints, and was made through pair programming.`,
         liveLink: `https://world-urban-score.netlify.app/`,
         githubLink: `https://github.com/Max-Chow-project2/urban-score`
     },
@@ -54,7 +67,33 @@ const projectsArray = [
         description: `Conversion of a website design to a multi-page website template (Home, Blog, Contact) with basic navigational functionality, accessibility features, and responsive styling.`,
         liveLink: `https://css-creative.netlify.app/`,
         githubLink: `https://github.com/maxtclaw/creative`
-    }
+    },
+    {
+        images: {
+            path1: `../assets/ghibli-1.png`,
+            alt1: `Ghibli Film Data webpage displaying information for Castle in the Sky`,
+            path2: `../assets/ghibli-2.png`,
+            alt2: `Ghibli Film Data webpage displaying information for My Neighbour Totoro`
+        },
+        title: `Ghibli Film Data`,
+        skills: [`HTML`, `CSS`, `JavaScript`, `API`],
+        description: `A responsive, API-connected website for displaying information for films by Studio Ghibli.`,
+        liveLink: `https://ghibli-film-data.netlify.app/`,
+        githubLink: `https://github.com/maxtclaw/ghibli-film-data`
+    },
+    {
+        images: {
+            path1: `../assets/hangman-1.png`,
+            alt1: `Hangman webpage without any guessed letters.`,
+            path2: `../assets/hangman-2.png`,
+            alt2: `Hangman webpage with a completed answer.`
+        },
+        title: `Hangman`,
+        skills: [`HTML`, `jQuery`, `JavaScript`],
+        description: `A simple JavaScript hangman game. `,
+        liveLink: `https://jquery-hangman.netlify.app/`,
+        githubLink: `https://github.com/maxtclaw/hangman`
+    },
 ]
 
 export default function populateProjects() {
