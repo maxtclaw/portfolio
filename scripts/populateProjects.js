@@ -16,19 +16,19 @@
 */
 
 const projectsArray = [
-    {
-        images: {
-            path1: `../assets/shopper-mapper-1.png`,
-            alt1: `Shopper Mapper website landing page.`,
-            path2: `../assets/shopper-mapper-2.png`,
-            alt2: `Shopper Mapper website displaying a map with nearby coffee stores.`
-        },
-        title: `Shopper Mapper`,
-        skills: [`HTML`, `CSS`, `JavaScript`, `API`, `React`],
-        description: `A Mapquest API-connected web application to find directions to nearby average shops. Created collaboratively with a 4-person team using React.`,
-        liveLink: `https://average-shopper-mapper.netlify.app/`,
-        githubLink: `https://github.com/shopper-mapper-cohort42/project-04`
-    },
+    // {
+    //     images: {
+    //         path1: `../assets/shopper-mapper-1.png`,
+    //         alt1: `Shopper Mapper website landing page.`,
+    //         path2: `../assets/shopper-mapper-2.png`,
+    //         alt2: `Shopper Mapper website displaying a map with nearby coffee stores.`
+    //     },
+    //     title: `Shopper Mapper`,
+    //     skills: [`HTML`, `CSS`, `JavaScript`, `API`, `React`],
+    //     description: `A Mapquest API-connected web application to find directions to nearby average shops. Created collaboratively with a 4-person team using React.`,
+    //     liveLink: `https://average-shopper-mapper.netlify.app/`,
+    //     githubLink: `https://github.com/shopper-mapper-cohort42/project-04`
+    // },
     {
         images: {
             path1: `../assets/public-list-1.png`,
